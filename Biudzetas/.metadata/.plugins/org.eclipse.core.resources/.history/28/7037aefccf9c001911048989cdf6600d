@@ -1,0 +1,100 @@
+import java.time.LocalDateTime;
+
+public class IslaiduIrasas {
+
+	
+//	suma
+//	data Su Laiku 
+//	kategorija
+//	atsiskaitymo Budas
+//	papildoma Info
+	private static int counter = 0;
+	private int id = 0;
+	private float islaiduSuma;
+	private LocalDateTime islaiduDataIrLaikas;
+	private String kategorija;
+	private Boolean pozymisArIBanka;
+	private String papildomaInfo;
+	private String atsiskaitymoTipas ="";
+	
+	public IslaiduIrasas(float islaiduSuma,  
+			String kategorija, Boolean pozymisArIBanka,
+			String papildomaInfo) {
+		super();
+		this.islaiduSuma = islaiduSuma;
+		this.kategorija = kategorija;
+		this.pozymisArIBanka = pozymisArIBanka;
+		this.papildomaInfo = papildomaInfo;
+		++counter;
+		this.id = counter;
+		this.islaiduDataIrLaikas=getTime();
+		
+	}
+	public int getCounter() {
+		return counter;
+	}
+//	public void setCounter(int counter) {
+//		this.counter = counter;
+//	}
+	public String getAtsiskaitymoTipas() {
+		return atsiskaitymas();
+	}
+	public void setAtsiskaitymoTipas(String atsiskaitymoTipas) {
+		this.atsiskaitymoTipas = atsiskaitymoTipas;
+	}
+	public float getIslaiduSuma() {
+		return islaiduSuma;
+	}
+	public void setIslaiduSuma(float islaiduSuma) {
+		this.islaiduSuma = islaiduSuma;
+	}
+	public LocalDateTime getIslaiduDataIrLaikas() {
+		return islaiduDataIrLaikas;
+	}
+	public void setIslaiduDataIrLaikas(LocalDateTime islaiduDataIrLaikas) {
+		this.islaiduDataIrLaikas = islaiduDataIrLaikas;
+	}
+	public String getKategorija() {
+		return kategorija;
+	}
+	public void setKategorija(String kategorija) {
+		this.kategorija = kategorija;
+	}
+	public Boolean getPozymisArIBanka() {
+		return pozymisArIBanka;
+	}
+	public void setPozymisArIBanka(Boolean pozymisArIBanka) {
+		this.pozymisArIBanka = pozymisArIBanka;
+	}
+	public String getPapildomaInfo() {
+		return papildomaInfo;
+	}
+	public void setPapildomaInfo(String papildomaInfo) {
+		this.papildomaInfo = papildomaInfo;
+	}
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String atsiskaitymas(){
+		if (pozymisArIBanka==true) {
+			atsiskaitymoTipas = "Banko pavedimas.";
+		} else {
+			atsiskaitymoTipas = "Atsiskaitymas grynais.";
+		} return atsiskaitymoTipas;
+	}
+	
+	LocalDateTime getTime(){
+		LocalDateTime now = LocalDateTime.now();
+	return now;
+	}
+	
+	
+	
+	
+	
+}

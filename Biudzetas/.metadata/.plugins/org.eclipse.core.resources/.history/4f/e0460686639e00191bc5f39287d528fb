@@ -1,0 +1,67 @@
+import java.time.format.DateTimeFormatter;
+
+public class PajamuIrasas extends Irasas {
+
+	private String kategorija;
+	private String atsiskaitymoTipas = "";
+
+	public PajamuIrasas(float suma, String papildomaInfo, Boolean pozymisArIBanka, String kategorija) {
+		super(suma, papildomaInfo, pozymisArIBanka);
+		this.kategorija = kategorija;
+	}
+
+	@Override
+	public String toString() {
+		if (this.pozymisArIBanka == true) {
+			setAtsiskaitymoTipas("Banko pavedimas.");
+		} else {
+			setAtsiskaitymoTipas("Atsiskaitymas grynais.");
+		}
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy.MM.dd");
+		return "Data: " + dtf.format(this.getDataIrLaikas()) + "\nID#: " + this.getId() + "\nSuma: " + this.getSuma()
+				+ "\nAtsiskaitymo tipas: " + atsiskaitymas(this.getPozymisArIBanka());
+	}
+
+	String atsiskaitymas() {
+		if (pozymisArIBanka == true) {
+			setAtsiskaitymoTipas("Banko pavedimas.");
+		} else {
+			setAtsiskaitymoTipas("Atsiskaitymas grynais.");
+		}
+		return getAtsiskaitymoTipas();
+	}
+
+	public String getAtsiskaitymoTipas() {
+		return atsiskaitymoTipas;
+	}
+
+	public void setAtsiskaitymoTipas(String atsiskaitymoTipas) {
+		this.atsiskaitymoTipas = atsiskaitymoTipas;
+	}
+
+	public String getKategorija() {
+		return kategorija;
+	}
+
+	public void setKategorija(String kategorija) {
+		this.kategorija = kategorija;
+	}
+//	suma
+//	data
+//	kategorija
+//	pozymis Ar I Banka
+//	papildoma Info
+
+//	public PajamuIrasas(float pajamuSuma, String kategorija, Boolean pozymisArIBanka,
+//			String papildomaInfo) {
+//		super();
+//		this.pajamuSuma = pajamuSuma;
+//		this.kategorija = kategorija;
+//		this.pozymisArIBanka = pozymisArIBanka;
+//		this.papildomaInfo = papildomaInfo;
+//		++counter;
+//		this.id = counter;
+//		this.pajamuDataIrLaikas=getTime();
+//	}
+
+}

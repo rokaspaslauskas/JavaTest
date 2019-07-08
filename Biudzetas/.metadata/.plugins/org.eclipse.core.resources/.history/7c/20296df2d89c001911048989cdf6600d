@@ -1,0 +1,107 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+
+public class PajamuIrasas {
+
+//	suma
+//	data
+//	kategorija
+//	pozymis Ar I Banka
+//	papildoma Info
+	private static int counter = 0;
+	private int id = 0;
+	private float pajamuSuma;
+	private LocalDate pajamuData;
+	private String kategorija;
+	private Boolean pozymisArIBanka;
+	private String papildomaInfo;
+	private String atsiskaitymoTipas ="";
+	private LocalDateTime pajamuDataIrLaikas;
+	
+	
+	public PajamuIrasas(float pajamuSuma, String kategorija, Boolean pozymisArIBanka,
+			String papildomaInfo) {
+		super();
+		this.pajamuSuma = pajamuSuma;
+		this.kategorija = kategorija;
+		this.pozymisArIBanka = pozymisArIBanka;
+		this.papildomaInfo = papildomaInfo;
+		++counter;
+		this.id = counter;
+		this.pajamuDataIrLaikas=getTime();
+	}
+	
+	
+	public static int getCounter() {
+		return counter;
+	}
+//	public void setCounter(int counter) {
+//		this.counter = counter;
+//	}
+	public String getAtsiskaitymoTipas() {
+		return atsiskaitymas();
+		 
+	}
+	public void setAtsiskaitymoTipas(String atsiskaitymoTipas) {
+		this.atsiskaitymoTipas = atsiskaitymoTipas;
+	}
+	public float getPajamuSuma() {
+		return pajamuSuma;
+	}
+	public void setPajamuSuma(float pajamuSuma) {
+		this.pajamuSuma = pajamuSuma;
+	}
+	public LocalDate getPajamuData() {
+		return pajamuData;
+	}
+	public void setPajamuData(LocalDate pajamuData) {
+		this.pajamuData = pajamuData;
+	}
+	public String getKategorija() {
+		return kategorija;
+	}
+	public void setKategorija(String kategorija) {
+		this.kategorija = kategorija;
+	}
+	public Boolean getPozymisArIBanka() {
+		return pozymisArIBanka;
+	}
+	public void setPozymisArIBanka(Boolean pozymisArIBanka) {
+		this.pozymisArIBanka = pozymisArIBanka;
+	}
+	public String getPapildomaInfo() {
+		return papildomaInfo;
+	}
+	public void setPapildomaInfo(String papildomaInfo) {
+		this.papildomaInfo = papildomaInfo;
+	}
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public LocalDateTime getPajamuDataIrLaikas() {
+		return pajamuDataIrLaikas;
+	}
+	public void setPajamuDataIrLaikas(LocalDateTime pajamuDataIrLaikas) {
+		this.pajamuDataIrLaikas = pajamuDataIrLaikas;
+	}
+	public String atsiskaitymas(){
+		if (pozymisArIBanka==true) {
+			atsiskaitymoTipas = "Banko pavedimas.";
+		} else {
+			atsiskaitymoTipas = "Atsiskaitymas grynais.";
+		} return atsiskaitymoTipas;
+	}
+	LocalDateTime getTime(){
+		LocalDateTime now = LocalDateTime.now();
+	return now;
+	}
+	
+	
+	
+	
+}

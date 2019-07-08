@@ -1,0 +1,71 @@
+import java.time.LocalDate;
+
+
+public class PajamuIrasas {
+
+//	suma
+//	data
+//	kategorija
+//	pozymis Ar I Banka
+//	papildoma Info
+	
+	private float pajamuSuma;
+	private LocalDate pajamuData;
+	private String kategorija;
+	private Boolean pozymisArIBanka;
+	private String papildomaInfo;
+	public float getPajamuSuma() {
+		return pajamuSuma;
+	}
+	public void setPajamuSuma(float pajamuSuma) {
+		this.pajamuSuma = pajamuSuma;
+	}
+	public LocalDate getPajamuData() {
+		return pajamuData;
+	}
+	public void setPajamuData(LocalDate pajamuData) {
+		this.pajamuData = pajamuData;
+	}
+	public String getKategorija() {
+		return kategorija;
+	}
+	public void setKategorija(String kategorija) {
+		this.kategorija = kategorija;
+	}
+	public Boolean getPozymisArIBanka() {
+		return pozymisArIBanka;
+	}
+	public void setPozymisArIBanka(Boolean pozymisArIBanka) {
+		this.pozymisArIBanka = pozymisArIBanka;
+	}
+	public String getPapildomaInfo() {
+		return papildomaInfo;
+	}
+	public void setPapildomaInfo(String papildomaInfo) {
+		this.papildomaInfo = papildomaInfo;
+	}
+	public PajamuIrasas(float pajamuSuma, String kategorija, Boolean pozymisArIBanka,
+			String papildomaInfo) {
+		super();
+		this.pajamuSuma = pajamuSuma;
+		this.kategorija = kategorija;
+		this.pozymisArIBanka = pozymisArIBanka;
+		this.papildomaInfo = papildomaInfo;
+	}
+	public void atsiskaitymas(){
+		if (pozymisArIBanka==true) {
+			String atsiskaitymoTipas = "Banko pavedimas.";
+		} else {
+			String atsiskaitymoTipas = "Atsiskaitymas grynais.";
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,37 @@
+import java.time.LocalDateTime;
+
+public class IslaiduIrasas extends Irasas{
+
+	
+//	suma
+//	data Su Laiku 
+//	kategorija
+//	atsiskaitymo Budas
+//	papildoma Info
+	
+	private String kategorija;
+	
+	public IslaiduIrasas(float suma, LocalDateTime dataIrLaikas, String papildomaInfo, 
+			int id, Boolean pozymisArIBanka, String kategorija) {
+		super(suma, dataIrLaikas, papildomaInfo, id, pozymisArIBanka);
+		this.kategorija = kategorija;
+	}
+
+	
+	
+	
+	
+//	public String atsiskaitymas(){
+//		if (pozymisArIBanka==true) {
+//			atsiskaitymoTipas = "Banko pavedimas.";
+//		} else {
+//			atsiskaitymoTipas = "Atsiskaitymas grynais.";
+//		} return atsiskaitymoTipas;
+//	}
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.Boolean"/>
+    <fullyQualifiedTypeName name="Biudzetas"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.lang.Void"/>
+    <fullyQualifiedTypeName name="paskaita12.IsSeeVessel"/>
+    <fullyQualifiedTypeName name="paskaita12.IsLandVehicle"/>
+    <fullyQualifiedTypeName name="paskaita12.IsVehicle"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="paveldejimas.Skaicius"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="PajamuIrasas"/>
+    <fullyQualifiedTypeName name="IslaiduIrasas"/>
+    <fullyQualifiedTypeName name="Irasas"/>
+</qualifiedTypeNameHistroy>

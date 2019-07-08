@@ -1,0 +1,139 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+
+public class Biudzetas {
+
+//	+	•Masyvuspakeistá ArrayList<PajamuIrasas> ir ArrayList<IslaiduIrasas>+
+//		•Stengtis taikyti DRY principà+
+//	+	•Klasëje Biudþetas padaryti metodà balansas(),
+//		kuris gràþina double/float tipo skaièiø:
+//		+	•Skaièiø gauna suskaièiuodamas visas iðlaidas ir visas pajamas. 
+//		+	•Balansas: pajamos minus iðlaidos+
+//		+	•Pvz, jei sàraðuose pajamø bus 100eur, 20eur, 500eur, 
+//			o iðlaidøbus 200eur, 370eur, 90eur, tai metodas balansas() 
+//			gràþins-40,00eur+
+//		+	•Ádëti meniu pasirinkimà, kad vartotojas bet kada galëtø 
+//			pasitikrinti balansà+
+//		+•Vartotojui papraðius turi bûti galimybë atspausdinti visas pajamas ir visas iðlaidas. +
+//		Spausdinant formatavimui naudoti String.format+
+//		+•Leisti vartotojui pasirinkti ir paðalinti bet kurá sàraðuose esantá pajamø 
+//		ir iðlaidø áraðà
+//		 •Vienas ið paðalinimo realizavimo pavyzdþiø:
+//			+•Á klases PajamøÁraðasir IðlaidøÁraðasádëti numerá, +
+//			kuris kiekvienam áraðui turi bûti unikalus (static counter)
+//			+•Atspausdinus vartotojas matys ðiuos numerius
+//			+•Tada vartotojas galës ávesti numerá áraðo, kurá nori paðalinti
+//			+•Programa atliks paieðkà sàraðe ir radusi áraðà su tokiu numeriu, tà áraðà iðtrins
+
+	ArrayList<IslaiduIrasas> islaidos = new ArrayList<IslaiduIrasas>();
+	ArrayList<PajamuIrasas> pajamos = new ArrayList<PajamuIrasas>();
+	ArrayList<Irasas> irasas = new ArrayList<Irasas>();
+//		PERDARYTI NAUDOJANT IRASA VIETOJ ISLAIDOS IR PAJAMOS <----------------
+	Scanner sc = new Scanner(System.in);
+
+	void firstMenu() {
+		System.out.println("[1] Sukurti pajamø áraðà.\n[2] Sukurti iðlaidø áraðà.\n[3] Gauti pajamø áraðà."
+				+ "\n[4] Gauti iðlaidø áraðà.\n[5] Balansas.\n[6] Visos pajamos.\n[7] Visos iðlaidos.\n[x] Iðjungti programà.");
+	}
+
+//	 sukurti 8 & 9
+	void menu() {
+		System.out.println(
+				"Kita uþduotis:\n[1] Sukurti pajamø áraðà.\n[2] Sukurti iðlaidø áraðà.\n[3] Gauti pajamø áraðà."
+						+ "\n[4]Gauti iðlaidø áraðà.\n[5] Balansas.\n[6] Visos pajamos.\n[7] Visos iðlaidos.\n[x] Iðjungti programà.");
+	}
+
+	void irasas(String task) {
+		if (task.equals("1")) {
+			float suma;
+			String papildomaInfo;
+			boolean pozymisArIBanka;
+			String kategorija ;
+			suma = sc.nextFloat();
+			papildomaInfo = sc.next();
+			pozymisArIBanka = sc.nextBoolean();
+			kategorija = sc.next();
+			Irasas pajamos = new PajamuIrasas(suma,kategorija , pozymisArIBanka, papildomaInfo);
+			irasas.add(pajamos);
+
+		}if (task.equals("2")) {
+			float suma;
+			String papildomaInfo;
+			boolean pozymisArIBanka;
+			String kategorija ;
+			suma = sc.nextFloat();
+			papildomaInfo = sc.next();
+			pozymisArIBanka = sc.nextBoolean();
+			kategorija = sc.next();
+			Irasas islaidos = new IslaiduIrasas(suma, ketegorija, pozymisArIBanka, papildomaInfo );
+			irasas.add(islaidos);
+
+		}
+		
+	}
+
+
+
+	void gautiIrasa() {
+
+		for (int i = 0; i < irasas.size(); i++) {
+			System.out.println(irasas.get(i));
+//			System.out.println(String.format("ID# %d", pajamos.get(i).getId()));
+//			System.out.println(dtf.format(pajamos.get(i).getPajamuDataIrLaikas()));
+//			System.out.println("Pajamø suma: " + pajamos.get(i).getPajamuSuma() + "\nKategorija: "
+//					+ pajamos.get(i).getAtsiskaitymoTipas() + "\nAtsiskaitymo tipas: "
+//					+ pajamos.get(i).getAtsiskaitymoTipas() + "\nPapildoma informacija: "
+//					+ pajamos.get(i).getPapildomaInfo());
+		}
+	}
+
+}
+
+//	void gautiIslaiduIsrasa() {
+//		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy.MM.dd HH:mm");
+//		for (int i = 0; i < islaidos.size(); i++) {
+//			System.out.println(dtf.format(islaidos.get(i).getIslaiduDataIrLaikas()));
+//			System.out.println(String.format("ID# %d", islaidos.get(i).getId()));
+//			System.out.println("Iðlaidø suma: " + islaidos.get(i).getIslaiduSuma() + "\nKategorija: "
+//					+ islaidos.get(i).getKategorija() + "\nAtsiskaitymo tipas: "
+//					+ islaidos.get(i).getAtsiskaitymoTipas() + "\nPapildoma informacija: "
+//					+ islaidos.get(i).getPapildomaInfo());
+//
+//		}
+//	}
+//
+//	void gautiPajamuSumas() {
+//		for (int i = 0; i < pajamos.size(); i++) {
+//			System.out.println(String.format("%.2f Eur", pajamos.get(i).getPajamuSuma()));
+//		}
+//	}
+//
+//	void gautiIslaiduSumas() {
+//		for (int i = 0; i < islaidos.size(); i++) {
+//			System.out.println(String.format("%.2f Eur", islaidos.get(i).getIslaiduSuma()));
+//		}
+//	}
+//
+//	void gautiBalansa() {
+//		float sumaIslaidu = 0;
+//		float sumaPajamu = 0;
+//		for (int i = 0; i < islaidos.size(); i++) {
+//			sumaIslaidu += islaidos.get(i).getIslaiduSuma();
+//		}
+//		for (int i = 0; i < pajamos.size(); i++) {
+//			sumaPajamu += pajamos.get(i).getPajamuSuma();
+//		}
+//		System.out.println(sumaPajamu - sumaIslaidu + " Eur");
+//	}
+//
+//	void trintiPajamuIrasa(int a) {
+//		a--;
+//		pajamos.remove(a);
+//	}
+//
+//	void trintiIslaiduIrasa(int a) {
+//		a--;
+//		islaidos.remove(a);
+//	}
+

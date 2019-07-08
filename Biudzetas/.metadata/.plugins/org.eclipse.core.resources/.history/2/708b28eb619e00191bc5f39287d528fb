@@ -1,0 +1,54 @@
+import java.time.format.DateTimeFormatter;
+
+public class PajamuIrasas extends Irasas{
+	
+	private String kategorija;
+
+	public PajamuIrasas(float suma, String papildomaInfo, Boolean pozymisArIBanka, String kategorija) {
+		super(suma, papildomaInfo, pozymisArIBanka);
+		this.kategorija = kategorija;
+	}
+	
+	public String getKategorija() {
+		return kategorija;
+	}
+	public void setKategorija(String kategorija) {
+		this.kategorija = kategorija;
+	}
+	@Override
+	public String toString() {
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy.MM.dd");
+		return dtf.format(this.getDataIrLaikas())+" " +this.getSuma();
+	}
+	
+	
+	
+//	suma
+//	data
+//	kategorija
+//	pozymis Ar I Banka
+//	papildoma Info
+	
+	
+	
+	
+	
+//	public PajamuIrasas(float pajamuSuma, String kategorija, Boolean pozymisArIBanka,
+//			String papildomaInfo) {
+//		super();
+//		this.pajamuSuma = pajamuSuma;
+//		this.kategorija = kategorija;
+//		this.pozymisArIBanka = pozymisArIBanka;
+//		this.papildomaInfo = papildomaInfo;
+//		++counter;
+//		this.id = counter;
+//		this.pajamuDataIrLaikas=getTime();
+//	}
+	
+	
+	
+	
+	
+	
+	
+}

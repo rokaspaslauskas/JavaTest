@@ -1,0 +1,65 @@
+import java.time.LocalDateTime;
+
+public class Irasas {
+	
+	private float suma;
+	private LocalDateTime dataIrLaikas;
+	private String papildomaInfo;
+	private static int counter = 0;
+	private int id = 0;
+	private Boolean pozymisArIBanka;
+	private String kategorija;
+	public Irasas(float suma, LocalDateTime dataIrLaikas, String papildomaInfo, 
+			int id, Boolean pozymisArIBanka, String kategorija) {
+		super();
+		this.suma = suma;
+		this.dataIrLaikas = dataIrLaikas;
+		this.papildomaInfo = papildomaInfo;
+		this.id = id;
+		this.pozymisArIBanka = pozymisArIBanka;
+		this.kategorija = kategorija;
+	}
+	public float getSuma() {
+		return suma;
+	}
+	public void setSuma(float suma) {
+		this.suma = suma;
+	}
+	public LocalDateTime getDataIrLaikas() {
+		return dataIrLaikas;
+	}
+	public void setDataIrLaikas(LocalDateTime dataIrLaikas) {
+		this.dataIrLaikas = dataIrLaikas;
+	}
+	public String getPapildomaInfo() {
+		return papildomaInfo;
+	}
+	public void setPapildomaInfo(String papildomaInfo) {
+		this.papildomaInfo = papildomaInfo;
+	}
+	public static int getCounter() {
+		return counter;
+	}
+	public static void setCounter(int counter) {
+		Irasas.counter = counter;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public Boolean getPozymisArIBanka() {
+		return pozymisArIBanka;
+	}
+	public void setPozymisArIBanka(Boolean pozymisArIBanka) {
+		this.pozymisArIBanka = pozymisArIBanka;
+	}
+	public String getKategorija() {
+		return kategorija;
+	}
+	public void setKategorija(String kategorija) {
+		this.kategorija = kategorija;
+	}
+	
+}

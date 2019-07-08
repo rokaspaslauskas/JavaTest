@@ -1,0 +1,75 @@
+import java.time.format.DateTimeFormatter;
+
+public class IslaiduIrasas extends Irasas{
+	
+	
+
+
+	private String kategorija;
+	private String atsiskaitymoTipas = "";
+	public IslaiduIrasas(float suma, String kategorija , Boolean pozymisArIBanka, String papildomaInfo) {
+		super(suma, papildomaInfo, pozymisArIBanka);
+		// TODO Auto-generated constructor stub
+		this.kategorija = kategorija;
+	}
+	@Override
+	public String toString() {
+		if (this.getPozymisArIBanka() == true) {
+			setAtsiskaitymoTipas("Banko pavedimas.");
+		} else if (this.getPozymisArIBanka() == false){
+			setAtsiskaitymoTipas("Atsiskaitymas grynais.");
+		}
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy.MM.dd HH:mm");
+		return "Data: " + dtf.format(this.getDataIrLaikas()) + "\nID#: " + this.getId() + "\nSuma: " + this.getSuma()
+				+ "\nKategorija: " + this.getKategorija()+"\nAtsiskaitymo tipas: " + this.getAtsiskaitymoTipas()+"\nPapildoma informacija: " + this.getPapildomaInfo();
+	}
+
+	
+
+	public String getAtsiskaitymoTipas() {
+		return atsiskaitymoTipas;
+	}
+
+	public void setAtsiskaitymoTipas(String atsiskaitymoTipas) {
+		this.atsiskaitymoTipas = atsiskaitymoTipas;
+	}
+	
+
+
+	public String getKategorija() {
+		return kategorija;
+	}
+
+
+	public void setKategorija(String kategorija) {
+		this.kategorija = kategorija;
+	}
+
+	
+//	suma
+//	data Su Laiku 
+//	kategorija
+//	atsiskaitymo Budas
+//	papildoma Info
+	
+	
+	
+
+
+	
+	
+	
+//	public String atsiskaitymas(){
+//		if (pozymisArIBanka==true) {
+//			atsiskaitymoTipas = "Banko pavedimas.";
+//		} else {
+//			atsiskaitymoTipas = "Atsiskaitymas grynais.";
+//		} return atsiskaitymoTipas;
+//	}
+	
+	
+	
+	
+	
+	
+}

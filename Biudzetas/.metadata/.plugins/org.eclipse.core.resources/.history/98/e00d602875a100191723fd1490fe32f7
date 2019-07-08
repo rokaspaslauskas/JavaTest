@@ -1,0 +1,73 @@
+import java.util.Scanner;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		Biudzetas biudzetas = new Biudzetas();
+		boolean runProgram = true;
+
+		biudzetas.firstMenu();
+		Scanner sc = new Scanner(System.in);
+
+//		biudzetas.irasas("1");
+//		biudzetas.gautiIrasa();
+		
+		while (runProgram) {
+			String task = sc.next();
+
+			if (task.equals("1")) {
+				System.out.println("(Pajamu suma, kategorija, poþymis ar á banka, papildoma informacija)");
+				biudzetas.irasas(task);
+//				biudzetas.gautiIrasa();
+				biudzetas.menu();
+				
+			}
+			else if (task.equals("2")) {
+				System.out.println("(Iðlaidø suma, kategorija, poþymis ar á banka, papildoma informacija)");
+				biudzetas.irasas(task);
+				biudzetas.menu();
+
+			} else if (task.equals("3")) {
+				biudzetas.gautiIrasa(task);
+				biudzetas.menu();
+
+			} else if (task.equals("4")) {
+//				biudzetas.gautiIslaiduIsrasa();
+				biudzetas.gautiIrasa(task);
+				biudzetas.menu();
+
+			} else if (task.equals("x")) {
+				runProgram = false;
+			}else if (task.equals("5")) {
+//				System.out.println("Balansas: "+biudzetas.islaidos.size()); 
+//				biudzetas.gautiBalansa();
+				biudzetas.menu();
+			}else if (task.equals("6")) {
+				System.out.println("Visos pajamø sumos: "); 
+//				biudzetas.gautiPajamuSumas();
+				biudzetas.menu();
+			}else if (task.equals("7")) {
+				System.out.println("Visos iðlaidø sumos: "); 
+//				biudzetas.gautiIslaiduSumas();
+				biudzetas.menu();
+			}else if (task.equals("8")) {
+				System.out.println("Áveskite trinamo árað0 ID#: "); 
+//				biudzetas.trintiPajamuIrasa(sc.nextInt());
+				biudzetas.menu();
+			}else if (task.equals("9")) {
+				System.out.println("Áveskite trinamo árað0 ID#: "); 
+//				biudzetas.trintiIslaiduIrasa(sc.nextInt());
+				biudzetas.menu();
+			}
+			else {
+				System.out.println("Erorr 404 klaidinga uþduoties ávestis!");
+				biudzetas.menu();
+			}
+
+		}
+
+		sc.close();
+
+	}
+
+}

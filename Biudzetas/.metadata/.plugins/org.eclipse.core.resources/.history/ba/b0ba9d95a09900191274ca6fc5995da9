@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		Biudzetas biudzetas = new Biudzetas();
+		boolean runProgram = true;
+
+		biudzetas.firstMenu();
+		Scanner sc = new Scanner(System.in);
+
+		while (runProgram) {
+			String task = sc.next();
+
+			if (task.equals("1")) {
+				System.out.println("(Pajamu suma, kategorija, poþymis ar á banka, papildoma informacija)");
+				biudzetas.pridetiPajamuIrasa(sc.nextFloat(), sc.next(), sc.nextBoolean(), sc.next());
+				biudzetas.menu();
+
+			} else if (task.equals("2")) {
+				System.out.println("(Iðlaidø suma, kategorija, poþymis ar á banka, papildoma informacija)");
+				biudzetas.pridetiIslaiduIrasa(sc.nextFloat(),  sc.next(), sc.nextBoolean(), sc.next());
+				biudzetas.menu();
+
+			} else if (task.equals("3")) {
+				biudzetas.gautiPajamuIrasa();
+				biudzetas.menu();
+
+			} else if (task.equals("4")) {
+				biudzetas.gautiIslaiduIsrasa();
+				biudzetas.menu();
+
+			} else if (task.equals("x")) {
+				runProgram = false;
+			} else {
+				System.out.println("Erorr 404 klaidinga uþduoties ávestis!");
+				biudzetas.menu();
+			}
+
+		}
+
+		sc.close();
+
+	}
+
+}

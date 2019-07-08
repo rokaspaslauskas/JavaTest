@@ -1,0 +1,39 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+
+public class PajamuIrasas extends Irasas{
+
+//	suma
+//	data
+//	kategorija
+//	pozymis Ar I Banka
+//	papildoma Info
+	
+	
+	
+	
+	public PajamuIrasas(float suma, LocalDateTime dataIrLaikas, String papildomaInfo, 
+			int id, Boolean pozymisArIBanka, String kategorija) {
+		super(suma, dataIrLaikas, papildomaInfo, id, pozymisArIBanka,kategorija);
+		
+	}
+//	public PajamuIrasas(float pajamuSuma, String kategorija, Boolean pozymisArIBanka,
+//			String papildomaInfo) {
+//		super();
+//		this.pajamuSuma = pajamuSuma;
+//		this.kategorija = kategorija;
+//		this.pozymisArIBanka = pozymisArIBanka;
+//		this.papildomaInfo = papildomaInfo;
+//		++counter;
+//		this.id = counter;
+//		this.pajamuDataIrLaikas=getTime();
+//	}
+	
+	
+	
+	
+	
+	
+	
+}

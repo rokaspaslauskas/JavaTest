@@ -1,0 +1,109 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class Biudzetas {
+
+	ArrayList<Irasas> irasas = new ArrayList<Irasas>();
+//		PERDARYTI NAUDOJANT IRASA VIETOJ ISLAIDOS IR PAJAMOS <----------------
+	Scanner sc = new Scanner(System.in);
+
+	void firstMenu() {
+		System.out.println("[1] Sukurti pajamø áraðà.\n[2] Sukurti iðlaidø áraðà.\n[3] Gauti pajamø áraðà."
+				+ "\n[4] Gauti iðlaidø áraðà.\n[5] Balansas.\n[6] Visos pajamos.\n[7] Visos iðlaidos.\n[x] Iðjungti programà.");
+	}
+
+//	 sukurti 8 & 9
+	void menu() {
+		System.out.println(
+				"Kita uþduotis:\n[1] Sukurti pajamø áraðà.\n[2] Sukurti iðlaidø áraðà.\n[3] Gauti pajamø áraðà."
+						+ "\n[4]Gauti iðlaidø áraðà.\n[5] Balansas.\n[6] Visos pajamos.\n[7] Visos iðlaidos.\n[x] Iðjungti programà.");
+	}
+
+	void irasas(String task) {
+		if (task.equals("1")) {
+			float suma;
+			String papildomaInfo;
+			boolean pozymisArIBanka;
+			String kategorija;
+			suma = sc.nextFloat();
+			papildomaInfo = sc.next();
+			pozymisArIBanka = sc.nextBoolean();
+			kategorija = sc.next();
+			Irasas pajamos = new PajamuIrasas(suma, kategorija, pozymisArIBanka, papildomaInfo);
+			irasas.add(pajamos);
+
+		}
+		if (task.equals("2")) {
+			float suma;
+			String papildomaInfo;
+			boolean pozymisArIBanka;
+			String kategorija;
+			suma = sc.nextFloat();
+			papildomaInfo = sc.next();
+			pozymisArIBanka = sc.nextBoolean();
+			kategorija = sc.next();
+			Irasas islaidos = new IslaiduIrasas(suma, kategorija, pozymisArIBanka, papildomaInfo);
+			irasas.add(islaidos);
+
+		}
+
+	}
+
+	void gautiIrasa(String task) {
+
+		for (Irasas obj : irasas) {
+			if (task.equals("3") & (obj instanceof PajamuIrasas)) {
+				System.out.println(obj);
+			}
+			if (task.equals("4") & (obj instanceof IslaiduIrasas)) {
+				System.out.println(obj);
+			}
+		}
+	}
+
+	void gautiSumas(String task) {
+		for (Irasas obj : irasas) {
+			if (task.equals("3") & (obj instanceof PajamuIrasas)) {
+				System.out.println(irasas.getSuma());
+			}
+			if (task.equals("4") & (obj instanceof IslaiduIrasas)) {
+				System.out.println(obj);
+			}
+		}
+	}
+}
+
+//
+//	void gautiPajamuSumas() {
+//		for (int i = 0; i < pajamos.size(); i++) {
+//			System.out.println(String.format("%.2f Eur", pajamos.get(i).getPajamuSuma()));
+//		}
+//	}
+//
+//	void gautiIslaiduSumas() {
+//		for (int i = 0; i < islaidos.size(); i++) {
+//			System.out.println(String.format("%.2f Eur", islaidos.get(i).getIslaiduSuma()));
+//		}
+//	}
+//
+//	void gautiBalansa() {
+//		float sumaIslaidu = 0;
+//		float sumaPajamu = 0;
+//		for (int i = 0; i < islaidos.size(); i++) {
+//			sumaIslaidu += islaidos.get(i).getIslaiduSuma();
+//		}
+//		for (int i = 0; i < pajamos.size(); i++) {
+//			sumaPajamu += pajamos.get(i).getPajamuSuma();
+//		}
+//		System.out.println(sumaPajamu - sumaIslaidu + " Eur");
+//	}
+//
+//	void trintiPajamuIrasa(int a) {
+//		a--;
+//		pajamos.remove(a);
+//	}
+//
+//	void trintiIslaiduIrasa(int a) {
+//		a--;
+//		islaidos.remove(a);
+//	}

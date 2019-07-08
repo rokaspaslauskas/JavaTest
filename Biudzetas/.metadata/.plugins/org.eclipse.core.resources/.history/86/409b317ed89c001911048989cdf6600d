@@ -1,0 +1,13 @@
+
+public class Irasas {
+	
+	private float suma;
+	
+	
+	
+	
+	
+	
+	Irasas() {
+	}
+}

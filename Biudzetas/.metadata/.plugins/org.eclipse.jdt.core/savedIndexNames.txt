@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+C:\Users\user1.715_KLASE\Desktop\JAVA Rokas\Biudzetas\.metadata\.plugins\org.eclipse.jdt.core
+789344348.index
+4216613169.index
+1650276491.index
+199190994.index

@@ -1,0 +1,67 @@
+
+import java.util.ArrayList;
+
+public class Biudzetas {
+
+//		•Masyvuspakeistá ArrayList<PajamuIrasas> ir ArrayList<IslaiduIrasas>
+//		•Stengtis taikyti DRY principà
+//		•Klasëje Biudþetas padaryti metodà balansas(),
+//		kuris gràþina double/floattipo skaièiø:
+//			•Skaièiø gauna suskaièiuodamas visas iðlaidas ir visas pajamas. 
+//			•Balansas: pajamos minus iðlaidos
+//			•Pvz, jei sàraðuose pajamø bus 100eur, 20eur, 500eur, 
+//			o iðlaidøbus 200eur, 370eur, 90eur, tai metodas balansas() 
+//			gràþins-40,00eur
+//			•Ádëti meniu pasirinkimà, kad vartotojas bet kada galëtø 
+//			pasitikrinti balansà
+//		•Vartotojui papraðius turi bûti galimybë atspausdinti visas pajamas ir visas iðlaidas. 
+//		Spausdinant formatavimui naudoti String.format
+//		•Leisti vartotojui pasirinkti ir paðalinti bet kurá sàraðuose esantá pajamø 
+//		ir iðlaidø áraðà•Vienas ið paðalinimo realizavimo pavyzdþiø:
+//			•Á klases PajamøÁraðasir IðlaidøÁraðasádëti numerá, 
+//			kuris kiekvienam áraðui turi bûti unikalus (staticcounter)
+//			•Atspausdinus vartotojas matys ðiuos numerius
+//			•Tada vartotojas galës ávesti numerá áraðo, kurá nori paðalinti
+//			•Programa atliks paieðkà sàraðe ir radusi áraðà su tokiu numeriu, tà áraðà iðtrins
+
+	ArrayList<IslaiduIrasas> islaidos = new ArrayList<IslaiduIrasas>();
+	ArrayList<PajamuIrasas> pajamos = new ArrayList<PajamuIrasas>();
+
+	void firstMenu() {
+
+		System.out.println("[1]Sukurti pajamø áraðà.\n[2]Sukurti iðlaidø áraðà.\n[3]Gauti pajamø áraðà."
+				+ "\n[4]Gauti iðlaidø áraðà.\n[x]Iðjungti programà.");
+	}
+
+	void menu() {
+		System.out.println("Kita uþduotis:\n[1]Sukurti pajamø áraðà.\n[2]Sukurti iðlaidø áraðà.\n[3]Gauti pajamø áraðà."
+				+ "\n[4]Gauti iðlaidø áraðà.\n[x]Iðjungti programà.");
+	}
+
+	void pridetiPajamuIrasa(float pajamuSuma, String kategorija, Boolean pozymisArIBanka, String papildomaInfo) {
+		PajamuIrasas pajamuIrasas = new PajamuIrasas(pajamuSuma, kategorija, pozymisArIBanka, papildomaInfo);
+		pajamos.add(pajamuIrasas);
+
+	}
+
+	void gautiPajamuIrasa() {
+		for (int i = 0; i < pajamos.size(); i++) {
+			System.out.println(pajamos.get(i).getPajamuSuma() + " " + pajamos.get(i).getKategorija() + " "
+					+ pajamos.get(i).getPozymisArIBanka() + " " + pajamos.get(i).getPapildomaInfo());
+		}
+	}
+
+	void pridetiIslaiduIrasa(float islaiduSuma, String kategorija, Boolean pozymisArIBanka, String papildomaInfo) {
+		IslaiduIrasas islaiduIrasas = new IslaiduIrasas(islaiduSuma, kategorija, pozymisArIBanka, papildomaInfo);
+		islaidos.add(islaiduIrasas);
+
+	}
+
+	void gautiIslaiduIsrasa() {
+		for (int i = 0; i < islaidos.size(); i++) {
+			System.out.println(islaidos.get(i).getIslaiduSuma() + " " + islaidos.get(i).getKategorija() + " "
+					+ islaidos.get(i).getPozymisArIBanka() + " " + islaidos.get(i).getPapildomaInfo());
+		}
+	}
+
+}

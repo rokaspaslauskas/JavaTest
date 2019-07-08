@@ -1,0 +1,14 @@
+import java.time.LocalDateTime;
+
+public class Irasas {
+	
+	private float suma;
+	private LocalDateTime dataIrLaikas;
+	
+	
+	
+	
+	
+	Irasas() {
+	}
+}
