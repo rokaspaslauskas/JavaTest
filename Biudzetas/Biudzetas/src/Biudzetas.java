@@ -11,7 +11,7 @@ public class Biudzetas {
 		System.out.println("[1] Sukurti pajamø áraðà.\n[2] Sukurti iðlaidø áraðà.\n[3] Gauti pajamø áraðà."
 				+ "\n[4] Gauti iðlaidø áraðà.\n[5] Balansas.\n[6] Visos pajamos.\n[7] Visos iðlaidos.\n[x] Iðjungti programà.\n[8] Trrinti áraðà pagal ID#.`");
 	}
-
+//98749849
 
 	void menu() {
 		System.out.println(
