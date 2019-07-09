@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+
+public class uzduotis3 {
+
+	public static void main(String[] args) {
+		ArrayList<String> listas1 = new ArrayList<>();
+		ArrayList<String> newListas1 = new ArrayList<>();
+		listas1.add("Labas");
+		listas1.add("Labas2");
+		listas1.add("Labas3");
+		listas1.add("Labas4");
+		listas1.add("Labas");
+		
+		for (String elm1 : listas1) {
+			if (!newListas1.contains(elm1)) ;{
+				newListas1.add(elm1);
+			}
+		}
+		System.out.println(newListas1);
+
+	}
+
+}

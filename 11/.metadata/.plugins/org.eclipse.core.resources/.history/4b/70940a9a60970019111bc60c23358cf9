@@ -1,0 +1,37 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+public class hashmapas {
+
+	public static void main(String[] args) {
+		HashMap<Integer, String> hmap = new HashMap<Integer, String>();
+
+		hmap.put(11, "vienas");
+		hmap.put(1, "vienas vienas");
+		hmap.put(5, "vienas penki");
+		hmap.put(4, "keturi");
+		hmap.put(2, "du");
+		System.out.println(hmap);
+		System.out.println(hmap.get(11));
+		System.out.println(hmap.keySet());
+		if (hmap.containsKey(2)) {
+			System.out.println("yra");
+
+		}
+
+		if (hmap.containsValue("du")) {
+			System.out.println("yra");
+
+		}
+		Set set = hmap.entrySet();
+		Iterator iterator = set.iterator();
+		while (iterator.hasNext()) {
+			Map.Entry mentry = (Map.Entry) iterator.next();
+			System.out.print("key is: " + mentry.getKey() + " & Value is: ");
+			System.out.println(mentry.getValue());
+		}
+
+	}
+
+}

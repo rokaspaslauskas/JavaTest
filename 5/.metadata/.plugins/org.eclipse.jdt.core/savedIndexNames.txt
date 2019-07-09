@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+C:\Users\user1.715_KLASE\Desktop\JAVA Rokas\5\.metadata\.plugins\org.eclipse.jdt.core
+4092121522.index
+1307150855.index
+4190801274.index
+2557318462.index

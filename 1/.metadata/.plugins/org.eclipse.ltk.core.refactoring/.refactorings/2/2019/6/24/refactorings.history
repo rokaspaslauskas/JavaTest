@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;aa&apos; in &apos;uzduotis5.main(...)&apos; to &apos;floatas&apos;&#x0D;&#x0A;- Original project: &apos;2&apos;&#x0D;&#x0A;- Original element: &apos;uzduotis5.main(String[]).aa&apos;&#x0D;&#x0A;- Renamed element: &apos;aa&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;aa&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{uzduotis5.java[uzduotis5~main~\[QString;@aa!140!148!146!147!F!0!false" name="floatas" references="true" stamp="1560277021762" version="1.0"/>
+</session>

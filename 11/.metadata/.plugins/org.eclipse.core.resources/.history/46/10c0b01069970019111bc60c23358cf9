@@ -1,0 +1,7 @@
+package paskaita11;
+
+public class Mangas extends Egzotiniai {
+	kasAsEsu(){
+		System.out.println("as esu egzotinis vaisius");
+	}
+}

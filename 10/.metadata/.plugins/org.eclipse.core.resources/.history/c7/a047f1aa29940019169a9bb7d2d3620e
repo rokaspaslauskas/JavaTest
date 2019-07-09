@@ -1,0 +1,58 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class dinaminiaiSarasaiAntra {
+
+	public static void main(String[] args) {
+//		Programa priima tokias komandas:
+//			[1] -ávesti þodá -leidþia ávesti þodá, kuris iðsaugomas á sàraðà       +
+//			[2] -rasti þodá -randa þodá ir atspausdina kelintas jis yra sàraðe     +
+//			[3] -trinti þodá -paklausia, koká þodá iðtrinti ir já iðtrina
+//			[4] -iðvalyti sàraðà
+//			[5] -baigti programà
+		boolean runProgram = true;
+		Scanner sc = new Scanner(System.in);
+		ArrayList<String> stringListas = new ArrayList<String>();
+		System.out.println(
+				"[1] -ávesti þodá\n[2] -rasti þodá\n[3] -trinti þodá\n[4] -iðvalyti sàraðà\n[5] -baigti programà");
+		while (runProgram) {
+
+			String menu = sc.next();
+			if (menu.equals("1")) {
+				System.out.println("Iveskite zodzi sarasa");
+				stringListas.add(sc.next());
+				System.out.println(stringListas);
+			} else if (menu.equals("2")) {
+				System.out.println("Iveskite ieskomo zodzio");
+
+				String ieskomasString = sc.next();
+				for (String elementas : stringListas) {
+					if (ieskomasString.equals(elementas)) {
+						System.out.println("Jusu ieskomas zodis yra saraso " + (stringListas.indexOf(elementas) + 1)
+								+ "-oje vietoje");
+					}
+
+				}
+			} else if (menu.equals("3")) {
+				System.out.println("Iveskite zodzi kuri norite istrinti");
+				String trinamasString = sc.next();
+				System.out.println("Ar tikrai norite istrinti zodi?");
+				String trinamasZodis = sc.next();
+				if (trinamasZodis.equals("taip")) {
+					stringListas.remove(trinamasString);
+					System.out.println("Jusu istrintas zodis ");
+					System.out.println(stringListas);
+				}
+			}else if (menu.equals("4")) {
+			System.out.println(stringListas);
+			stringListas.clear();
+		}
+		 else if (menu.equals("5")) {
+			runProgram = false;
+		}
+		sc.close();
+
+	}
+
+}
+}

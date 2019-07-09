@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		Traukinys traukinys = new Traukinys();
+		Scanner sc = new Scanner(System.in);
+		while(true) {
+			int task = sc.nextInt();
+			if (task.equals("1")) {
+				
+			}
+			
+			
+			
+			
+		}
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class masyvai {
+	public static void main(String[] args) {
+		Scanner skanerisa = new Scanner(System.in);
+		System.out.println("Áveskite vardà ");
+		String a = skanerisa.next();
+	
+		String strArray [] = new string [3];
+		
+		strArray [0] = a;
+		strArray [1] = a;
+		strArray [2] = a;
+	
+	
+	}
+}

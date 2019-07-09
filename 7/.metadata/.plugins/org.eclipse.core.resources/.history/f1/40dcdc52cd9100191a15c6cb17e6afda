@@ -1,0 +1,45 @@
+package tankas;
+
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Pasirinkite: \n[w] - ejimas i siaure\n[s] - ejimas i "
+				+ "pietus\n[a] - ejimas i vakarus\n[d] - ejimas i rytus\n"
+				+ "[space bar] - suvis\n[i] - info\n[x] - pabaiga");
+		Tankas tankas = new Tankas();
+		Scanner sc = new Scanner(System.in);
+		String a= sc.next();
+		boolean runProgram = true;
+		while(runProgram) {
+			if(a.equals("w")) {
+				tankas.iSiaure();
+				System.out.println("Kita komanda:");
+				y+=1;
+				a= sc.next();
+			}
+			
+		// atspausdinamas komandø sàraðas
+		// gaunamas/paskaièiuojamas dabarties laikas
+		// nusprendþiama, kokià komandà ávykdyti
+		// ávykdoma komanda
+
+		}
+		sc.close();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

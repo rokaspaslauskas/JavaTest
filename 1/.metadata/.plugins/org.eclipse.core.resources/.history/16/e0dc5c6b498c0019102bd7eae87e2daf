@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class uzduotis5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner aa = new Scanner(System.in);
+		Scanner.close
+		float a = aa.nextFloat();
+		System.out.println(a);
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

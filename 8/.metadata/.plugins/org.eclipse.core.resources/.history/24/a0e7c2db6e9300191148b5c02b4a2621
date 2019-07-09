@@ -1,0 +1,51 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class paskaita9 {
+
+	public static void main(String[] args) {
+		ArrayList<String> listas = new ArrayList<>();
+		boolean tikrinimas = true;
+		Scanner sc = new Scanner(System.in);
+		String inputString;
+		String didString="";
+		
+		while (tikrinimas) {
+			System.out.println("áveskite þodá!");
+			inputString=(sc.next());	
+			listas.add(inputString);
+
+//				if (listas.size() < 5) {
+//					if(listas.contains(inputString)) {
+//						System.out.println("kartojasi");
+//					} else {
+//						listas.add(inputString);
+//					
+//					}
+//				}
+//				else {
+//					System.out.println(listas);
+//					listas.clear();
+//					listas.add(inputString);
+//				}
+		}
+			for(String elm:listas) {
+				
+			}			
+			
+			
+			
+			
+			
+
+		
+		sc.close();
+		
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class treciaUzduotis {
+
+	public static void main(String[] args) {
+								
+		
+		
+		
+		
+		Scanner x = new Scanner(System.in);
+		System.out.println("Áveskite skaièiø);
+		int a = x.nextInt();
+		int b = x.nextInt();
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,15 @@
+
+public class antraAntraDalis1 {
+
+	public static void main(String[] args) {
+		
+		String a = "abcdfghijklmnoprs";
+		
+		System.out.println(a[3]);
+		
+		
+		
+		
+	}
+
+}

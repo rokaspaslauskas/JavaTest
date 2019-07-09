@@ -1,0 +1,19 @@
+package paskaita11;
+
+
+
+
+public class paveldejimai {
+		
+	Vaisiai vaisiai = new Vaisiai() {
+		
+	};
+	
+	public static void main(String[] args) {
+
+		
+		
+		
+	}
+
+}

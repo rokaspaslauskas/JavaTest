@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\user1.715_KLASE\Desktop\JAVA Rokas\traukinys\.metadata\.plugins\org.eclipse.jdt.core
+789344348.index

@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class treciaUzduotis {
+
+	public static void main(String[] args) {
+								
+		
+		
+		
+		
+		Scanner x = new Scanner(System.in);
+		System.out.println("Áveskite skaièiø");
+		int a = x.nextInt();
+		System.out.println("Áveskite skaièiø");
+		int b = x.nextInt();
+		System.out.println("Áveskite norimà veiksmà");
+		String c = x.nextLine();
+		x.close();
+		
+	}
+
+}

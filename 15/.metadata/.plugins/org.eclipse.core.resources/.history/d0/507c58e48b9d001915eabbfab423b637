@@ -1,0 +1,21 @@
+
+public class PirminiaiSkaiciai {
+
+	public static void main(String[] args) {
+		int a = 1;
+		int b = 30;
+		for (int i=a; i < b; i++) {
+			int c = i;
+			if (i/i==1 && i%2!=1) {
+				System.out.println(i);
+			}
+			
+		}
+		
+		
+		
+		
+
+	}
+
+}

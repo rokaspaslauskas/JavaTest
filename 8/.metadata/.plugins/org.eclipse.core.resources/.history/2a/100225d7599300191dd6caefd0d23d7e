@@ -1,0 +1,79 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class paskaita8 {
+
+	public static void main(String[] args) {
+//	String a = new String("Namas");
+//	String b = new String ("Namas");
+//	System.out.println(a==b);
+//	System.out.println(a.equals(b));
+//			//   /\ objektu lyginimas
+//	System.out.println("");
+//	String c = "Namas";
+//	String d = c;
+//	String e = "Namas";
+//	System.out.println(c==d);
+//	System.out.println(c==e);
+
+		///////////////////////////////////////////////////////////////
+		// ARRAYLIST
+
+	ArrayList <String> sarasas = new ArrayList<>();
+		
+	sarasas.add("Pirmas");
+	
+	if(sarasas.contains("Pirmas")) {
+		System.out.println("tu debilas!");
+	}
+//	sarasas.add("Antras");
+//	sarasas.add("Trecias");	
+//	sarasas.add("Ketvirtas");
+//	sarasas.add("Penktas");
+//	
+//	System.out.println(sarasas);
+//	
+//	sarasas.add(0, "Dar pirmesnis");
+//	sarasas.add(1, "po dar pirmesnio");
+//	
+//	System.out.println(sarasas);
+//	sarasas.remove("Trecias");
+//	System.out.println(sarasas);
+//	System.out.println(sarasas);
+//	
+//	
+		ArrayList<String> listas = new ArrayList<>();
+//		boolean tikrinimas = false;
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("áveskite þodá!");
+		listas.add(sc.next());
+		while (listas.size() < 6) {
+
+			if (!listas.contains(sc.next())) {
+				System.out.println("Þodis kartojasi áveskite nauja þodá!");
+				listas.add(sc.next());
+//				if (listas.contains(sc.next())) {
+//					if (listas.size() == 5) {
+//						System.out.println(listas);
+//						listas.clear();
+//					}
+
+				} else {
+
+					listas.add(sc.next());
+					}
+				if (listas.size() == 5) {
+					System.out.println(listas);
+					listas.clear();
+				}
+			}
+
+		}
+
+		System.out.println(listas + "!");
+		sc.close();
+
+	}
+
+}

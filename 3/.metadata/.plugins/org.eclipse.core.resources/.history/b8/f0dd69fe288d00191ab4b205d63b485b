@@ -1,0 +1,14 @@
+
+public class loginiaiOperatoriai {
+	
+	public static void main(String[] args) {
+		
+		boolean taip = true;
+		boolean ne = false;
+		
+		
+		
+		
+	}
+
+}

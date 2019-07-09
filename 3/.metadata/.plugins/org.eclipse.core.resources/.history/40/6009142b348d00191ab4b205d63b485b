@@ -1,0 +1,34 @@
+import java.util.*;
+
+public class kelialiejiMetaiUzduotis {
+
+	public static void main(String[] args) {
+
+		Scanner x = new Scanner(System.in);
+		System.out.println("Áveskite savo metus");
+		int a = x.nextInt();
+		x.close();
+		
+		if ( a % 4 == 0 ) {
+			if ( a % 100 == 0 ) {
+				System.out.println("it is a leap year");
+			System.out.println("it is a common year");
+				
+			} 
+		
+			
+			else if ( a % 400 == 0) {
+				System.out.println("it is a common year");
+			} 
+			
+		}else System.out.println("it is a leap year");
+		
+		
+//			else if ( a % 100 == 0 ) {
+//				System.out.println("it is a leap year");
+			 
+		
+		
+	}
+
+}

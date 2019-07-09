@@ -1,0 +1,35 @@
+
+public class traciaPaskaita1 {
+
+	public static void main(String[] args) {
+		String a = "JAVA programavimo kursas";
+		
+		
+		System.out.println("Paskutinis antro þodþio simbolis: "+ a.substring(16, 17));
+		System.out.println("Pirmas treèio þodþio simbolis: "+ a.substring(18, 19));
+		System.out.println("Pirmas sakinio þodis: "+ a.substring(0, 5));
+		System.out.println("Paskutinis þodis: "+ a.substring(17));
+		System.out.println("Sakinys su pakeistomis \"a\" á \"@\": " + a.replace('a', '@'));
+		System.out.println("Sakinys didþiosiomis raidëmis: "+a.toUpperCase());
+		System.out.println("Sakinys maþosiomis raidëmis: "+a.toLowerCase());
+		System.out.println("Sakinio ilgis: "+a.length());
+		System.out.println("Pirmo þodþio ilgis: "+a.substring(0, 5).length()+ " " + 
+				"Antro þodþio ilgis: "+a.substring(6,18 ).length()+ " " + 
+						"Treèio þodþio ilgis: "+a.substring(19).length());
+		System.out.println("Pirmojo, antrojo, treèiojo þodþiø pirmøjø raidþiø indeksai: "
+						+ a.indexOf(0)", "+ a.indexOf(5)", "+ a.indexOf(0));
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,63 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class paskaita8 {
+
+	public static void main(String[] args) {
+//	String a = new String("Namas");
+//	String b = new String ("Namas");
+//	System.out.println(a==b);
+//	System.out.println(a.equals(b));
+//			//   /\ objektu lyginimas
+//	System.out.println("");
+//	String c = "Namas";
+//	String d = c;
+//	String e = "Namas";
+//	System.out.println(c==d);
+//	System.out.println(c==e);
+	
+	///////////////////////////////////////////////////////////////
+					//ARRAYLIST
+	
+	ArrayList <String> sarasas = new ArrayList<>();
+		
+	sarasas.add("Pirmas");
+	sarasas.add("Antras");
+	sarasas.add("Trecias");	
+	sarasas.add("Ketvirtas");
+	sarasas.add("Penktas");
+	
+	System.out.println(sarasas);
+	
+	sarasas.add(0, "Dar pirmesnis");
+	sarasas.add(1, "po dar pirmesnio");
+	
+	System.out.println(sarasas);
+	sarasas.remove("Trecias");
+	System.out.println(sarasas);
+	System.out.println(sarasas);
+	
+	
+	ArrayList <String> listas = new ArrayList<>();
+
+	Scanner sc = new Scanner(System.in);
+	
+	while (listas.size()<5 ) {
+		listas.add(sc.next());
+		if (listas.size() == 5){
+			System.out.println(listas);
+			listas.remove(0);
+			listas.remove(1);
+			listas.remove(2);
+			listas.remove(3);
+			listas.remove(4);
+		}
+	}
+	
+	sc.close();
+	
+	
+	
+	}
+
+}

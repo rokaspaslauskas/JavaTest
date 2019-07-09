@@ -1,0 +1,6 @@
+
+public enum Diena {
+	PIRMADIENIS,
+	ANTRADIENIS,
+	TRECIADIENIS
+}

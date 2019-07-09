@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class PirminiaiSkaiciai {
+
+	public static void main(String[] args) {
+		int a ;
+		int b ;
+		
+		java.util.Scanner sc = new java.util.Scanner(System.in);
+		a = sc.nextInt();
+		b = sc.nextInt();
+		for (int i = a; i < b; i++) {
+			if ((i > 1 ) && 
+					(i % 2 != 0 && i % 3 != 0 && i % 5 != 0 && i % 7 != 0) ||
+						(i==2||i==3||i==5||i==7)) {
+				System.out.println(i);
+			}
+
+		}
+	}
+
+}

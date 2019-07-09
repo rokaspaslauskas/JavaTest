@@ -1,0 +1,32 @@
+package failai;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class input {
+
+	public static void main(String[] args) throws IOException {
+		InputStream in = null;
+	
+		try {
+			in = new FileInputStream("src/failas_naujas.txt");
+			int raidesKodas;
+	
+			while ((raidesKodas = in.read()) > 0) {
+				String reverse;
+				char raide = (char) raidesKodas;
+				String reverse1=String.valueOf(raide);
+				reverse = new StringBuilder(reverse1).reverse().toString();
+				System.out.print(reverse1);
+//				System.out.print(raide);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (in != null)
+				in.close();
+		}
+	}
+
+}

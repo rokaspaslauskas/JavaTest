@@ -1,0 +1,28 @@
+
+public class traciaPaskaita1 {
+
+	public static void main(String[] args) {
+		
+		String a = "JAVA programavimo kursas";
+		
+		System.out.println("Paskutinis þodis: "+ a.substring(17));
+		System.out.println("Pirmas treèio þodþio simbolis: "+ a.substring(17, 19));
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

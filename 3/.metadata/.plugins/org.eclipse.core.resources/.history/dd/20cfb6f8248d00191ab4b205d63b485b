@@ -1,0 +1,18 @@
+
+public class treciaAntra1 {
+	
+	
+	public static final int KONSTANTA = 256;
+	
+	
+	public static void main(String[] args) {
+		
+		System.out.println(KONSTANTA);
+		
+		
+		
+		
+
+	}
+
+}

@@ -1,0 +1,17 @@
+
+public class pirmaUz {
+
+	public static void main(String[] args) {
+		ArrayList<Integer> pirmasSarasas = new ArrayList<>();
+		pirmasSarasas.add(2);
+		pirmasSarasas.add(4);
+		pirmasSarasas.add(new Integer(5));
+		pirmasSarasas.add(6);
+		System.out.println(pirmasSarasas);
+		Integer intObjektas = pirmasSarasas.get(1);
+		int primityvusIntKinatamasis = intObjektas.intValue();
+		System.out.println(primityvusIntKinatamasis);
+
+	}
+
+}

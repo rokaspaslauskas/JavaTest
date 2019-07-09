@@ -1,0 +1,29 @@
+package penktaPaskaita;
+import java.util.*;
+public class treciaUz {
+
+	public static void main(String[] args) {
+		
+		Random random = new Random();
+		int a = random.nextInt(5);
+		int b;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Áveskite skaièiø!");
+		b = sc.nextInt();
+		while (a!=b) {
+			if (a>b) {
+				System.out.println("Ávestas skaièius didesnis!");
+				System.out.println("Áveskite maþesná skaièiø!");
+				b = sc.nextInt();
+			}else {
+				System.out.println("Ávestas skaièius maþesnis!");
+				System.out.println("Áveskite didesná skaièiø!");
+				b = sc.nextInt();
+			}
+				
+		}
+		System.out.println("Laimëjote!");
+
+	}
+
+}

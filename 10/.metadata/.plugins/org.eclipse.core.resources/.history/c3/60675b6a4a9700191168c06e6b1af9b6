@@ -1,0 +1,12 @@
+import java.util.ArrayList;
+
+public class dinaminiaiSarasaiTrecia {
+
+	public static void main(String[]args) {
+		
+		ArrayList<Koordinate> xyListas = new ArrayList<Koordinate>();
+		
+	}
+	
+	
+}

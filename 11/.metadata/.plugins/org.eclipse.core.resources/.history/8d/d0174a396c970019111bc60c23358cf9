@@ -1,0 +1,9 @@
+package paskaita11;
+
+super Vaisius.kasAsEsu();
+public class Obuolys extends Lietuviski{
+	@Override
+	void kasAsEsu(){
+		System.out.println("as esu Lietuviskas vaisius");
+	}
+}

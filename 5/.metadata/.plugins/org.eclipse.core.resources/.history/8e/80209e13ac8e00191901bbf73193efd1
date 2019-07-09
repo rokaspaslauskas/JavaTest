@@ -1,0 +1,60 @@
+package penktaPaskaita;
+import java.lang.*; 
+import java.io.*; 
+import java.util.*; 
+import java.util.Scanner;
+
+public class ketvirtaUz {
+
+	public static void main(String[] args) {
+		String a;
+		Scanner sc = new Scanner(System.in);
+		a = sc.nextLine();
+		
+		String str1 = a;
+	      int upperCase = 0;
+	      int lowerCase = 0;
+	      char[] ch = str1.toCharArray();
+	      for(char chh : ch) {
+	         if(chh >='A' && chh <='Z') {
+	            upperCase++;
+	         } else if (chh >= 'a' && chh <= 'z') {
+	            lowerCase++;
+	         } else {
+	            continue;
+	         }
+	      }
+	      System.out.println("Count of Uppercase letter/s is/are "
+	      + upperCase + " and of Lowercase letter/s is/are " + lowerCase);
+		
+		
+		String input = a; 
+        char[] hello = input.toCharArray(); 
+        List<Character> trial1 = new ArrayList<>(); 
+  
+        for (char c: hello) 
+            trial1.add(c); 
+  
+        Collections.reverse(trial1); 
+        ListIterator li = trial1.listIterator(); 
+        while (li.hasNext()) 
+            System.out.print(li.next()); 
+		
+        int count=0;  
+        
+        char ch1[]= new char[string1.length()];     
+        for(int n=0;n<string1.length();n++)  
+        {  
+            ch1[n]= string1.charAt(n);  
+            if( ((n>0)&&(ch1[n]!=' ')&&(ch1[n-1]==' ')) || ((ch1[0]!=' ')&&(n==0)) )  
+                count++;  
+        }  
+        return count;  
+		
+        String string1 =a;  
+        System.out.println(wordcount(string) + " words.");   
+	}
+	
+	
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;a&apos; in &apos;paskaita8.main(...)&apos; to &apos;inputString&apos;&#x0D;&#x0A;- Original project: &apos;src&apos;&#x0D;&#x0A;- Original element: &apos;paskaita8.main(String[]).a&apos;&#x0D;&#x0A;- Renamed element: &apos;a&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;a&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/&lt;{paskaita8.java[paskaita8~main~\[QString;@a!1248!1256!1255!1255!QString;!0!false" name="inputString" references="true" stamp="1561042593113" version="1.0"/>
+</session>

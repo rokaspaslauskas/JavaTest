@@ -1,0 +1,17 @@
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+public class data {
+
+	public static void main(String[] args) {
+		LocalDate siandien = LocalDate.now();
+		
+		System.out.println(siandien);
+		
+		LocalDateTime laikas = LocalDateTime.now();
+		
+		System.out.println(laikas);
+	}
+	
+
+}

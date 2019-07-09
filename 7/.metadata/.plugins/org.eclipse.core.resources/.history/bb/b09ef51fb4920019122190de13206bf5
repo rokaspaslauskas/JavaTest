@@ -1,0 +1,24 @@
+
+public class paskaita8 {
+
+	public static void main(String[] args) {
+//	String a = new String("Namas");
+//	String b = new String ("Namas");
+//	System.out.println(a==b);
+//	System.out.println(a.equals(b));
+//			//   /\ objektu lyginimas
+//	System.out.println("");
+//	String c = "Namas";
+//	String d = c;
+//	String e = "Namas";
+//	System.out.println(c==d);
+//	System.out.println(c==e);
+	
+	///////////////////////////////////////////////////////////////
+					//ARRAYLIST
+	
+	ArrayList <String> sarasas = new ArrayList<>();
+		
+	}
+
+}

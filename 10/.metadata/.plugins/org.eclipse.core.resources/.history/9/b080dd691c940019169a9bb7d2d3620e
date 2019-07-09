@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class dinaminiaiSarasaiAntra {
+
+	public static void main(String[] args) {
+//		Programa priima tokias komandas:
+//			[1] -ávesti þodá -leidþia ávesti þodá, kuris iðsaugomas á sàraðà
+//			[2] -rasti þodá -randa þodá ir atspausdina kelintas jis yra sàraðe 
+//			[3] -trinti þodá -paklausia, koká þodá iðtrinti ir já iðtrina
+//			[4] -iðvalyti sàraðà
+//			[5] -baigti programà
+		
+		Scanner sc = new Scanner(System.in);
+		ArrayList<String> stringListas = new ArrayList <String>();
+		
+		
+		
+		
+		
+	}
+
+}

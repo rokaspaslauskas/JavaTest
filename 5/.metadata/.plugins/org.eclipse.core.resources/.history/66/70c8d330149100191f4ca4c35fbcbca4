@@ -1,0 +1,37 @@
+import java.util.*;
+public class antraUz {
+
+	public static void main(String[] args) {
+//				spausdink("Rokas","Paslauskas","JAVA", 22);
+//				spausdink("Rokas","Paslauskas","JAVA");
+				Scanner sc = new Scanner(System.in);
+				String a = sc.nextLine();
+				String b = sc.nextLine();
+				String c = sc.nextLine();
+				int d = sc.nextInt();
+				spausdink(a,b,c,d);
+	}
+		public static void spausdink(String vardas, String pavarde,
+				String kalba, int savaiciuSkaicius) {
+			System.out.println("Að, "+vardas +" "+pavarde+
+					", tikrai iðmoksiu programuoti "+kalba+" kalba per "
+					+ savaiciuSkaicius+" savaites");
+		}
+	
+		public static void spausdink(String vardas, String pavarde,
+				String kalba) {
+			System.out.println("Að, "+vardas +" "+pavarde+
+					", tikrai iðmoksiu programuoti "+kalba+" kalba");
+		}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

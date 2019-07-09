@@ -1,0 +1,13 @@
+import java.util.*;
+import java.util.Scanner;
+public class uzduotis1 {
+
+	public static void main(String[] args) {
+		int [] sk = new int [10];
+		Scanner x = new Scanner(System.in);
+		System.out.println("Áveskite skaièiø");
+		int sk [0]= x.nextInt();
+//		x.close();
+	}
+
+}

@@ -1,0 +1,17 @@
+
+public class antraAntraDalis1 {
+
+	public static void main(String[] args) {
+		
+		String a = "abcdfghijklmnoprs";
+		
+		System.out.println(a.length());
+		System.out.println(a.charAt(0));
+		System.out.println(a.charAt(1));
+		System.out.println(a.charAt(0));
+		System.out.println(a.charAt(1));
+		
+		
+	}
+
+}

@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class AntraPaskaita {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner skaneris = new Scanner(System.in);
+		System.out.println("Áveskite skaièiø ");
+//		int skaicius = skaneris.NextIn();
+		
+//		System.out.println(skaicius);
+	}
+
+}

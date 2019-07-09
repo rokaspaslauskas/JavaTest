@@ -1,0 +1,118 @@
+package tankas;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
+public class Tankas {
+	int x = 0, y  = 0, suviai = 0, suviaiS = 0, suviaiR = 0, suviaiV = 0, suviaiP = 0;
+	String time = LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm"));
+	String kryptis;
+	Random random = new Random();
+	int priesasX = (random.nextInt(20))-10;
+	int priesasY = (random.nextInt(20))-10;
+	int c;
+	static boolean runProgram = true;
+	public void iSiaure() {
+		y++;
+		kryptis="Siaure";
+		System.out.println("Tankas pajuda á Ðiauræ\n"+time+" "+ x+";"+ y);
+		System.out.println("Kita komanda:");
+		// pajuda i siaure x0 y+1
+		//laikas + kordinates esamos x y 
+	}
+	public void iPietus() {
+		y--;
+		kryptis="Pietus";
+		System.out.println("Tankas pajuda á Pietus\n"+time+" "+ x+";"+ y);
+		System.out.println("Kita komanda:");
+		// pajuda i pietus x0 y-1
+		//laikas + kordinates esamos x y 
+	}	
+	public void iVakarus() {
+		x--;
+		kryptis = "Vakarus";
+		System.out.println("Tankas pajuda á Rytus\n"+time+" "+ x+";"+ y);
+		System.out.println("Kita komanda:");
+		// pajuda i vakarus x-1 y0
+		//laikas + kordinates esamos x y 
+	}
+	public void iRytus() {
+		x++;
+		kryptis = "Rytus";
+		System.out.println("Tankas pajuda á Vakarus\n"+time+" "+ x+";"+ y);
+		System.out.println("Kita komanda:");
+		// pajuda i rytus x+1 y0
+		//laikas + kordinates esamos x y 
+	}
+	
+	public void suvis() {
+		suviai++;
+		if(kryptis=="Siaure") {
+			suviaiS++;
+		} else if (kryptis=="Pietus") {
+			suviaiP++;
+		} else if (kryptis=="Vakarus") {
+			suviaiV++;
+		} else if (kryptis=="Rytus") {
+			suviaiR++;
+		}
+		System.out.println("Ðuvis á "+kryptis);
+		System.out.println(time+" "+ x+";"+ y);
+		//suviai i priesa
+		if (kryptis=="Siaure"&&x==priesasX) { 
+			for (c=y;c<=priesasY;c++) {
+			System.out.println("Pataikei! Prieðas buvo: "+priesasX+";"+priesasY);
+			infoX();			
+			runProgram = false;
+			break;
+			}	
+		} else if (kryptis=="Pietus"&&x==priesasX) { 
+			for (c=y;y>=priesasY;c-- ) {
+			System.out.println("Pataikei! Prieðas buvo: "+priesasX+";"+priesasY);
+			runProgram = false;
+			infoX();			
+			break;
+			}	
+		} else if (kryptis=="Siaure"&&y==priesasY) { 
+			for (c=x;x<=priesasX;c++ ) {
+			System.out.println("Pataikei! Prieðas buvo: "+priesasX+";"+priesasY);
+			runProgram = false;
+			infoX();			
+			break;
+			}	
+		} else if (kryptis=="Siaure"&&y==priesasY) { 
+			for (c=x;x>=priesasX;c-- ) {
+			System.out.println("Pataikei! Prieðas buvo: "+priesasX+";"+priesasY);
+			runProgram = false;
+			infoX();			
+			break;
+			}	
+		} else if {
+			System.out.println("Kita komanda:");
+			
+		}
+		
+		//suvis i pasisukusia krypti
+		
+	}
+	public void info() {
+		System.out.println("INFO: tanko koordinatës: "+x+":"+y);
+		System.out.println("INFO: Tanko ðûviai: "+suviaiS+" á Ðiauræ, "+suviaiR+" á	Rytus,"+ suviaiP 
+				+" á Pietus, "+suviaiV +" á Vakarus. Ið viso ðûviø: "+suviai);
+		System.out.println(priesasX+" "+ priesasY);
+		System.out.println("Kita komanda:");
+		
+		
+		
+		//kryptis
+		//kordinates x/y esamos
+		//kiek atliko suviu
+		//kiek atliko suviu i kiekviena puse
+	}
+	public void infoX() {
+		System.out.println("INFO: tanko koordinatës: "+x+":"+y);
+		System.out.println("INFO: Tanko ðûviai: "+suviaiS+" á Ðiauræ, "+suviaiR+" á	Rytus,"+ suviaiP 
+				+" á Pietus, "+suviaiV +" á Vakarus. Ið viso ðûviø: "+suviai);
+		System.out.println("G.G.");
+	}
+}

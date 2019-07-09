@@ -1,0 +1,15 @@
+import java.util.HashMap;
+
+
+public class hashmapas {
+
+	public static void main(String[] args) {
+		HashMap<Integer, String> hmap = new HashMap<Integer, String>();
+		
+		hmap.add(11, "vienas");
+		System.out.println(hmap);
+		
+		
+	}
+
+}

@@ -1,0 +1,8 @@
+package paskaita11;
+
+public class Egzotiniai extends Vaisiai {
+	@Override
+	kasAsEsu(){
+		System.out.println("as esu vaisius");
+	}
+}

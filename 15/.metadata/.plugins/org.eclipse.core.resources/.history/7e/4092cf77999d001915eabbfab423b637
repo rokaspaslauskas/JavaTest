@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Miegas {
+
+	public static void main(String[] args) {
+		Boolean darboDiena;
+		Boolean atostogos;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("darbo diena?");
+		darboDiena = sc.hasNext();
+		System.out.println("atostogos?");
+		atostogos = sc.hasNext();
+		if ( darboDiena ||(atostogos == true && darboDiena == true)) {
+			System.out.println("galima miegoti");
+		} else {
+			System.out.println("kelkis  i darba!");
+		}
+		sc.close();
+	}
+
+}

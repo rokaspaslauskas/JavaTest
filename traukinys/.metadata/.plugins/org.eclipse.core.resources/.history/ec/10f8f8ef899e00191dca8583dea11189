@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class Programa {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		Traukinys traukinys = new Traukinys();
+		traukinys.menu();
+		while (true) {
+			int task = sc.nextInt();
+			if (task == 1) {
+				traukinys.traukinysVaziuoja();
+				traukinys.menu();
+			} else if (task == 2) {
+				traukinys.traukinysStovi();
+				traukinys.menu();
+			} else if (task == 3) {
+				if (traukinys.isTraukinysVaz() == true) {
+					traukinys.traukinysVaziuoja();
+					traukinys.menu();
+				} else if (traukinys.isTraukinysVaz() == false
+						&& traukinys.getUzimtosVietos() <= traukinys.getVietos()) {
+					String vardas = sc.next();
+					String pavarde = sc.next();
+					traukinys.traukinysLaipina(vardas, pavarde);
+					traukinys.menu();
+				} else if (traukinys.isTraukinysVaz() == false
+						&& traukinys.getUzimtosVietos() == traukinys.getVietos()) {
+					System.out.println("Traukinys pilnas!");
+					traukinys.menu();
+
+				} 
+			} else if (task == 4) {
+				traukinys.traukinysIsLaipina();
+				traukinys.menu();
+			} else if (task == 5) {
+				traukinys.sarasas();
+				System.out.println(traukinys.getUzimtosVietos());
+			}
+
+		}
+
+	}
+}

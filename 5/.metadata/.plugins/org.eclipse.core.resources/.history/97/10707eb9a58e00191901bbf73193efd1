@@ -1,0 +1,22 @@
+package penktaPaskaita;
+import java.util.*;
+public class treciaUz {
+
+	public static void main(String[] args) {
+		
+		Random random = new Random();
+		int a = random.nextInt(100);
+		int b;
+		Scanner sc = new Scanner(System.in);
+		b =int sc;
+		while (a!=b) {
+			if (a>b) {
+				System.out.println("Ávestas skaièius didesnis!");
+				
+			}
+				
+		}
+
+	}
+
+}

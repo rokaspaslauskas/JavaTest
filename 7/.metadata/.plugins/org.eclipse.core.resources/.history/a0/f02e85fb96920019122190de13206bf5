@@ -1,0 +1,45 @@
+package tankas;
+
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+
+		System.out.println("Pasirinkite: \n[w] - ejimas i siaure\n[s] - ejimas i "
+				+ "pietus\n[a] - ejimas i vakarus\n[d] - ejimas i rytus\n"
+				+ "[space bar] - suvis\n[i] - info\n[x] - pabaiga");
+		Tankas tankas = new Tankas();
+		Scanner sc = new Scanner(System.in);
+		 tankas.runProgram = true;
+		while (tankas.runProgram==true) {
+		String	a = sc.nextLine();
+			if (a.equals("w")) {
+				tankas.iSiaure();
+				
+			} else if (a.equals("s")) {
+				tankas.iPietus();
+			} else if (a.equals("a")) {
+				tankas.iVakarus();
+			} else if (a.equals("d")) {
+				tankas.iRytus();
+			} else if (a.equals(" ")) {
+				tankas.suvis();
+			} else if (a.equals("i")){ 
+				tankas.info();
+			} else if (a.equals("x")){ 
+				tankas.runProgram = false;
+				tankas.infoX();
+			} else System.out.println("Erorr 404");
+			
+			// atspausdinamas komandø sàraðas
+			// gaunamas/paskaièiuojamas dabarties laikas
+			// nusprendþiama, kokià komandà ávykdyti
+			// ávykdoma komanda
+
+		}
+		sc.close();
+
+	}
+
+}

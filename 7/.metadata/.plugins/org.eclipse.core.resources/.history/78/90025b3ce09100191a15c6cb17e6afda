@@ -1,0 +1,60 @@
+package tankas;
+
+import java.util.Scanner;
+
+public class main {
+
+	public static void main(String[] args) {
+
+		System.out.println("Pasirinkite: \n[w] - ejimas i siaure\n[s] - ejimas i "
+				+ "pietus\n[a] - ejimas i vakarus\n[d] - ejimas i rytus\n"
+				+ "[space bar] - suvis\n[i] - info\n[x] - pabaiga");
+		Tankas tankas = new Tankas();
+		Scanner sc = new Scanner(System.in);
+//		String a = sc.next();
+		boolean runProgram = true;
+		while (runProgram) {
+		String	a = sc.next();
+			if (a.equals("w")) {
+				tankas.iSiaure();
+				
+
+			} else if (a.equals("s")) {
+				tankas.iPietus();
+				System.out.println("Kita komanda:");
+			//	a = sc.next();
+			} else if (a.equals("a")) {
+				tankas.x += 1;
+				tankas.kryptis = "Vakarus";
+				tankas.iVakarus();
+				System.out.println("Kita komanda:");
+//				a = sc.next();
+			} else if (a.equals("d")) {
+				tankas.x += 1;
+				tankas.kryptis = "Rytus";
+				tankas.iRytus();
+				System.out.println("Kita komanda:");
+//				a = sc.next();
+			} else if (a.equals(" ")) {
+				tankas.suvis();
+				System.out.println("Kita komanda:");
+//				a = sc.next();
+			} else if
+				(a.equals("i")) {
+			
+				tankas.info();
+				System.out.println("Kita komanda:");
+//				a = sc.next();
+			}
+			}
+			// atspausdinamas komandø sàraðas
+			// gaunamas/paskaièiuojamas dabarties laikas
+			// nusprendþiama, kokià komandà ávykdyti
+			// ávykdoma komanda
+
+		}
+		sc.close();
+
+	}
+
+}

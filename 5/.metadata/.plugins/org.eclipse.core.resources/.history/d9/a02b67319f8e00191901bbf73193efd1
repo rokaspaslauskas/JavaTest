@@ -1,0 +1,23 @@
+package penktaPaskaita;
+import java.util.Random;
+
+
+
+public class penktaAntraUz {
+	
+	public static void main(String[] args) {
+	
+		
+		Random random = new Random();
+		
+		int a;
+		for (int i=0; i<3; i++) {
+			if (random.nextInt(6)==5) {
+				System.out.println("Pralaimëjai...");
+			} else { System.out.println("Laimëjai!");}
+		}
+		
+		
+	}
+
+}

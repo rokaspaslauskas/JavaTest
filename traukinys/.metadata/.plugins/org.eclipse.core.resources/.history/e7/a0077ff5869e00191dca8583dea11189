@@ -1,0 +1,77 @@
+import java.util.ArrayList;
+
+
+public class Traukinys extends TraukinioVeiksmai {
+
+	private boolean traukinysVaz;
+	private static int vietos = 3;
+	private int uzimtosVietos = 0;
+	ArrayList<Keleiviai> keleiviuSarasas = new ArrayList<Keleiviai>();
+		
+	
+	public void menu() {
+		System.out.println("1- traukinys vaziuoja\n2- traukinys sustoja\n3- laipinimas\n4- islaipina\n5- keleiviu sarasas.");
+	}
+	
+	public void sarasas() {
+	
+		for (Keleiviai mano:keleiviuSarasas) {
+			
+			System.out.println(mano);
+		}
+	}
+
+	
+	
+	public void traukinysLaipina(String vardas,String pavarde) {
+		System.out.println("Vardas Pavarde");
+		Keleiviai keleiviai = new Keleiviai(vardas, pavarde);
+		keleiviuSarasas.add(keleiviai);
+		uzimtosVietos = keleiviuSarasas.size();
+		
+	}
+	
+	
+	
+	public void traukinysIsLaipina() {
+		System.out.println("Keleivivi islipa.");
+		keleiviuSarasas.clear();
+		uzimtosVietos = keleiviuSarasas.size();
+	}
+	
+	
+	
+	public void traukinysVaziuoja() {
+		traukinysVaz = true;
+		System.out.println("Traukinys vaziuoja");
+	}
+
+	public void traukinysStovi() {
+		traukinysVaz = false;
+		System.out.println("Traukinys stovi");
+	}
+
+
+	public boolean isTraukinysVaz() {
+		return traukinysVaz;
+	}
+
+	public void setTraukinysVaz(boolean traukinysVaz) {
+		this.traukinysVaz = traukinysVaz;
+	}
+
+	public int getVietos() {
+		return vietos;
+	}
+
+	public int getUzimtosVietos() {
+		return uzimtosVietos;
+	}
+
+	public void setUzimtosVietos(int uzimtosVietos) {
+		this.uzimtosVietos = uzimtosVietos;
+	}
+
+	
+	
+}

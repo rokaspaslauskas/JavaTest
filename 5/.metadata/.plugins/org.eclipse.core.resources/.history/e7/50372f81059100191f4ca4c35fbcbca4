@@ -1,0 +1,21 @@
+
+public class antraUz {
+
+	public static void main(String[] args) {
+	
+		public static void spausdink(String vardas, String pavarde, String kalba, int savaiciuSkaicius) {
+			System.out.println("Að, "+[vardas] +" "+[pavarde]+", tikrai iðmoksiu programuoti "+[kalba]+" kalba per" + [savaiciuSkaicius]+" savaites");
+		}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+	
+}

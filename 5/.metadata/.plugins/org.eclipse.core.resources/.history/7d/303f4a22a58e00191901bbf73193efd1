@@ -1,0 +1,14 @@
+package penktaPaskaita;
+import java.util.*;
+public class treciaUz {
+
+	public static void main(String[] args) {
+		
+		Random random = new Random();
+		int a = random.nextInt(100);
+		
+		
+
+	}
+
+}

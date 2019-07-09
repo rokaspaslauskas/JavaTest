@@ -1,0 +1,28 @@
+package failai;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
+
+public class main {
+
+	public static void main(String[] args) throws IOException {
+
+		char[] tekstas = { 'J', 'a', 'v', 'a' };
+		OutputStream os = null;
+		try {
+			os = new FileOutputStream("src/failas.txt");
+			for (int i = 0; i < tekstas.length; i++) {
+				os.write(tekstas[i]);
+			}
+			os.flush();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (os != null)
+				os.close();
+		}
+
+	}
+
+}

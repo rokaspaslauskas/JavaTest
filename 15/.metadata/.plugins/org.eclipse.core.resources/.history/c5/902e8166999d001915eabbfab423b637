@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class Miegas {
+
+	public static void main(String[] args) {
+		Boolean darboDiena;
+		Boolean atostogos;
+	
+		Scanner sc = new Scanner(System.in);
+		darboDiena = sc.hasNext();
+		atostogos = sc.hasNext();
+		if (atostogos == true && darboDiena == false) {
+			System.out.println("galima miegoti");
+		}
+		sc.close();
+	}
+
+}

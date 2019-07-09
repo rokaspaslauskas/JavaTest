@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+
+public class dinaminiaiSarasaiTrecia {
+
+	public static void main(String[]args) {
+		
+		ArrayList<Koordinate> sarasas = new ArrayList<Koordinate>();
+		
+		
+		sarasas.add(new Koordinate(2,5));
+		sarasas.add(new Koordinate(2,6));
+		sarasas.add(new Koordinate(7,6));
+		System.out.println(sarasas);
+	
+		
+	}
+	
+	
+}

@@ -1,0 +1,34 @@
+
+public class antraAntraDalis1 {
+
+	public static void main(String[] args) {
+		
+//		String a = "CodeAcademy";
+//		
+//		System.out.println(a.length());
+//		System.out.println(a.charAt(1));
+//		System.out.println(a.charAt(0));
+//		System.out.println(a.charAt(1));
+//		System.out.println("CodeAcademy".charAt(0));
+//		System.out.println("CodeAcademy".substring(2, 7));
+//		System.out.println(a.substring(2));
+//		System.out.println(a.substring(0, 4));
+//		System.out.println(a.indexOf('A')); //susirasti raides vieta
+//		
+//		
+//		String zodis1= "apple";
+//		String zodis2= "Apple";
+//		System.out.println(zodis1.compareTo(zodis2));
+//		System.out.println(zodis2.compareTo(zodis1));		
+//		
+		
+		String a = "vienas";
+		String b = "keturi";
+		
+		System.out.println(String.valueOf( a.charAt(3)).compareTo(String.valueOf( b.charAt(3))));
+	
+		
+		
+	}
+
+}

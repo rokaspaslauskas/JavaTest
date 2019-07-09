@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+public class uzduotis3 {
+
+	public static <String> ArrayList<String> removeDuplicates(ArrayList<String> listas1) {
+		
+		ArrayList<String> newListas1 = new ArrayList<String>();
+		
+		for (String element : listas1) {
+			
+			if (!newListas1.contains(element)) {
+				
+				newListas1.add(element);
+			}
+		}
+		
+		return newListas1;
+	}
+	public static void main(String[] args) {
+		ArrayList<String> listas1 = new ArrayList<>();
+//		ArrayList<String> newListas1 = new ArrayList<>();
+		listas1.add("Labas");
+		listas1.add("Labas2");
+		listas1.add("Labas3");
+		listas1.add("Labas4");
+		listas1.add("Labas");
+		ArrayList<String> newListas1 = new ArrayList<>();
+		System.out.println(newListas1);
+//		ArrayList<String> listas1 = new ArrayList<>(Arrays.asListas1(1, 10, 1, 2, 2, 3, 3, 10, 3, 4, 5, 5));
+//		ArrayList<String> newListas1 = removeDuplicates(listas1);
+//		Set<String> set= new HashSet<>(listas1);	
+//		listas1.clear();
+//		listas1.addAll(set);
+//		System.out.println(listas1);
+//		
+		
+
+	}
+}

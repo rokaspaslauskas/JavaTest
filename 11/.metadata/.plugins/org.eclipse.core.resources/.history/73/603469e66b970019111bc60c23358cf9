@@ -1,0 +1,21 @@
+package paskaita11;
+
+public class Paveldejimai {
+
+	public static void main(String[] args) {
+		Obuolys o1 = new Obuolys();
+		Antaninis a1 = new Antaninis();
+		Alyvinis al1 = new Alyvinis();
+		
+		
+		
+		
+		
+		
+		
+		
+		a1.kasAsEsu();
+		o1.kasAsEsu();
+	}
+
+}

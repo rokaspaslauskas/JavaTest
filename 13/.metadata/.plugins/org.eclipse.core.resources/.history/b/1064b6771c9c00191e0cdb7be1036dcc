@@ -1,0 +1,18 @@
+package failai;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class newRead {
+	public static void main(String[]args){
+		try{FileWriter fw=new FileWriter("src/failas.txt",true);
+		BufferedWriter bw=new BufferedWriter(fw);
+		PrintWriter out=new PrintWriter(bw);
+		out.println("the text");out.close();
+		}catch
+		(IOException e){// ...}}}
+		}
+	}
+}

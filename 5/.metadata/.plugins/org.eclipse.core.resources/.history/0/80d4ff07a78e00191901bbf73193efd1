@@ -1,0 +1,13 @@
+package penktaPaskaita;
+
+import java.util.Scanner;
+
+public class ketvirtaUz {
+
+	public static void main(String[] args) {
+		String a;
+		Scanner sc = new Scanner(System.in);
+		a = sc.next();
+	}
+
+}
