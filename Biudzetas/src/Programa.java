@@ -50,9 +50,14 @@ public class Programa {
 				System.out.println("Áveskite trinamo áraðo ID#: ");
 				int id = sc.nextInt();
 				biudzetas.trintiIrasa(id);
-				System.out.println(biudzetas.irasas.size());
 				biudzetas.menu();
-			} else {
+			} else  if (task.equals("9")) {
+				System.out.println("Áveskite keièiamo áraðo ID#: ");
+				int id = sc.nextInt();
+				biudzetas.pakeistiIrasa(id);
+				
+				biudzetas.menu();
+			} else{
 				System.out.println("Erorr 404 klaidinga uþduoties ávestis!");
 				biudzetas.menu();
 			}

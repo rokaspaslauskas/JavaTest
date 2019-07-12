@@ -20,17 +20,10 @@ public class Irasas {
 		++counter;
 		this.id = counter;
 		this.pozymisArIBanka = pozymisArIBanka;
-//		this.atsiskaitymoTipas = (atsiskaitymas());
+
 	}
 	
-//	public String atsiskaitymas(){
-//		if (pozymisArIBanka==true) {
-//			setAtsiskaitymoTipas("Banko pavedimas.");
-//		} else {
-//			setAtsiskaitymoTipas("Atsiskaitymas grynais.");
-//		} return getAtsiskaitymoTipas();
-//	}
-			
+	
 	public float getSuma() {
 		return suma;
 	}

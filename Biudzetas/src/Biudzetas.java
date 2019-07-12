@@ -9,14 +9,16 @@ public class Biudzetas {
 
 	void firstMenu() {
 		System.out.println("[1] Sukurti pajamø áraðà.\n[2] Sukurti iðlaidø áraðà.\n[3] Gauti pajamø áraðà."
-				+ "\n[4] Gauti iðlaidø áraðà.\n[5] Balansas.\n[6] Visos pajamos.\n[7] Visos iðlaidos.\n[x] Iðjungti programà.\n[8] Trrinti áraðà pagal ID#.`");
+				+ "\n[4] Gauti iðlaidø áraðà.\n[5] Balansas.\n[6] Visos pajamos.\n[7] Visos iðlaidos."
+				+ "\n[8] Trinti áraðà pagal ID#.\n[8] Redaguoti áraðà pagal ID#.\n[x] Iðjungti programà.");
 	}
 //98749849
 
 	void menu() {
 		System.out.println(
 				"Kita uþduotis:\n[1] Sukurti pajamø áraðà.\n[2] Sukurti iðlaidø áraðà.\n[3] Gauti pajamø áraðà."
-						+ "\n[4]Gauti iðlaidø áraðà.\n[5] Balansas.\n[6] Visos pajamos.\n[7] Visos iðlaidos.\n[x] Iðjungti programà.");
+						+ "\n[4]Gauti iðlaidø áraðà.\n[5] Balansas.\n[6] Visos pajamos.\n[7] Visos iðlaidos."
+						+ "\n[8] Trinti áraðà pagal ID#.\n[9] Redaguoti áraðà pagal ID#.\n[x] Iðjungti programà.");
 	}
 
 	void irasas(String task) {
@@ -91,9 +93,51 @@ public class Biudzetas {
 	}
 
 	void trintiIrasa(int a) {
-		a--;
-		irasas.remove(a);
-		//blogas padarytikadtrintu per indexof
+		for (int i = 0; i < irasas.size(); i++) {
+			if (irasas.get(i).getId() == a) {
+				irasas.remove(i);
+			}
+		}
+
+	}
+
+	void pakeistiIrasa(int a) {
+		for (int i = 0; i < irasas.size(); i++) {
+			System.out.println("Ar norite keisti sumà? [taip] arba [ne]");
+			String arNori = sc.next();
+			if ((irasas.get(i).getId() == a) & arNori.equals("taip")) {
+				float suma = sc.nextFloat();
+				irasas.get(i).setSuma(suma);
+			}
+
+			System.out.println("Ar norite keisti kategorija? [taip] arba [ne]");
+			String arNori2 = sc.next();
+			if ((irasas.get(i).getId() == a) & arNori2.equals("taip")) {
+				if (irasas.get(i) instanceof PajamuIrasas) {
+					String kategorija = sc.next();
+					((PajamuIrasas) irasas.get(i)).setKategorija(kategorija);
+					;
+					if (irasas.get(i) instanceof IslaiduIrasas) {
+						kategorija = sc.next();
+						((IslaiduIrasas) irasas.get(i)).setKategorija(kategorija);
+						;
+					}
+				}
+			}
+			System.out.println("Ar norite keisti apmokëjimo bûdà? [taip] arba [ne]");
+			String arNori3 = sc.next();
+			if ((irasas.get(i).getId() == a) & arNori3.equals("taip")) {
+				boolean pozymisArIBanka = sc.nextBoolean();
+				irasas.get(i).setPozymisArIBanka(pozymisArIBanka);
+			}
+			System.out.println("Ar norite keisti papildomà informacijà? [taip] arba [ne]");
+			String arNori4 = sc.next();
+			if ((irasas.get(i).getId() == a) & arNori4.equals("taip")) {
+				String papildomaInfo = sc.next();
+				irasas.get(i).setPapildomaInfo(papildomaInfo);
+			}
+
+		}
+
 	}
 }
-
