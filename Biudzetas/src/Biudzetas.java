@@ -106,6 +106,7 @@ public class Biudzetas {
 			System.out.println("Ar norite keisti sumà? [taip] arba [ne]");
 			String arNori = sc.next();
 			if ((irasas.get(i).getId() == a) & arNori.equals("taip")) {
+				System.out.println("Iveskite nauja sumà:");
 				float suma = sc.nextFloat();
 				irasas.get(i).setSuma(suma);
 			}
