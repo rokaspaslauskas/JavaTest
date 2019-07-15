@@ -1,3 +1,4 @@
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class PajamuIrasas extends Irasas {
@@ -5,9 +6,9 @@ public class PajamuIrasas extends Irasas {
 	private String kategorija;
 	private String atsiskaitymoTipas = "";
 
-	public PajamuIrasas(float suma, String kategorija, Boolean pozymisArIBanka, String papildomaInfo) {
-		super(suma, papildomaInfo, pozymisArIBanka);
-		this.kategorija = kategorija;
+	public PajamuIrasas(float suma, Boolean pozymisArIBanka, String papildomaInfo, LocalDateTime dataIrLaikas) {
+		super(suma, papildomaInfo, pozymisArIBanka, dataIrLaikas);
+		this.kategorija = "Pajamos";
 	}
 
 	@Override

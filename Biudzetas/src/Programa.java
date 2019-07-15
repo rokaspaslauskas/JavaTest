@@ -1,8 +1,9 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Programa {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		Biudzetas biudzetas = new Biudzetas();
 		boolean runProgram = true;
 
@@ -12,17 +13,17 @@ public class Programa {
 //		biudzetas.irasas("1");
 //		biudzetas.gautiIrasa();
 //ewiojr
-		
+
 		while (runProgram) {
 			String task = sc.next();
-			
+
 			if (task.equals("1")) {
-				System.out.println("(Pajamu suma, kategorija, poþymis ar á banka, papildoma informacija)");
+				System.out.println("(Pajamu suma, poþymis ar á banka, papildoma informacija)");
 				biudzetas.irasas(task);
 				biudzetas.menu();
 
 			} else if (task.equals("2")) {
-				System.out.println("(Iðlaidø suma, kategorija, poþymis ar á banka, papildoma informacija)");
+				System.out.println("(Iðlaidø suma, poþymis ar á banka, papildoma informacija)");
 				biudzetas.irasas(task);
 				biudzetas.menu();
 
@@ -35,7 +36,7 @@ public class Programa {
 			} else if (task.equals("x")) {
 				runProgram = false;
 			} else if (task.equals("5")) {
-				System.out.println("Balansas: "); 
+				System.out.println("Balansas: ");
 				biudzetas.gautiBalansa();
 				biudzetas.menu();
 			} else if (task.equals("6")) {
@@ -51,13 +52,25 @@ public class Programa {
 				int id = sc.nextInt();
 				biudzetas.trintiIrasa(id);
 				biudzetas.menu();
-			} else  if (task.equals("9")) {
+			} else if (task.equals("9")) {
 				System.out.println("Áveskite keièiamo áraðo ID#: ");
 				int id = sc.nextInt();
 				biudzetas.pakeistiIrasa(id);
-				
+
 				biudzetas.menu();
-			} else{
+			} else if (task.equals("10")) {
+				System.out.println("Áraðyti duomenis á failà. ");
+				biudzetas.irasytiIFaila();
+
+				biudzetas.menu();
+			} else
+				if (task.equals("11")) {
+					System.out.println("Áraðyti duomenis á failà. ");
+
+					biudzetas.skaitytiFaila();
+
+					biudzetas.menu();
+				} else {
 				System.out.println("Erorr 404 klaidinga uþduoties ávestis!");
 				biudzetas.menu();
 			}

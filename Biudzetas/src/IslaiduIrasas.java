@@ -1,3 +1,4 @@
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class IslaiduIrasas extends Irasas{
@@ -7,10 +8,10 @@ public class IslaiduIrasas extends Irasas{
 
 	private String kategorija;
 	private String atsiskaitymoTipas = "";
-	public IslaiduIrasas(float suma, String kategorija , Boolean pozymisArIBanka, String papildomaInfo) {
-		super(suma, papildomaInfo, pozymisArIBanka);
+	public IslaiduIrasas(float suma, Boolean pozymisArIBanka, String papildomaInfo, LocalDateTime dataIrLaikas) {
+		super(suma, papildomaInfo, pozymisArIBanka, dataIrLaikas);
 		// TODO Auto-generated constructor stub
-		this.kategorija = kategorija;
+		this.kategorija = "Islaidos";
 	}
 	@Override
 	public String toString() {

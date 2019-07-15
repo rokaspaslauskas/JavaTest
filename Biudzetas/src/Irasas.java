@@ -8,18 +8,18 @@ public class Irasas {
 	private static int counter = 0;
 	private int id = 0;
 	private Boolean pozymisArIBanka;
-
+	
 	
 	
 	public Irasas(float suma, String papildomaInfo, 
-			Boolean pozymisArIBanka) {
+			Boolean pozymisArIBanka, LocalDateTime dataIrLaikas) {
 		super();
 		this.suma = suma;
-		this.dataIrLaikas = LocalDateTime.now();
 		this.papildomaInfo = papildomaInfo;
 		++counter;
 		this.id = counter;
 		this.pozymisArIBanka = pozymisArIBanka;
+		this.dataIrLaikas = dataIrLaikas;
 
 	}
 	

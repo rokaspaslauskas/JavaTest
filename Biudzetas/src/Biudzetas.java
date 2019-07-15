@@ -1,4 +1,12 @@
 import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 public class Biudzetas {
@@ -26,12 +34,11 @@ public class Biudzetas {
 			float suma;
 			String papildomaInfo;
 			boolean pozymisArIBanka;
-			String kategorija;
 			suma = sc.nextFloat();
-			papildomaInfo = sc.next();
 			pozymisArIBanka = sc.nextBoolean();
-			kategorija = sc.next();
-			Irasas pajamos = new PajamuIrasas(suma, kategorija, pozymisArIBanka, papildomaInfo);
+			papildomaInfo = sc.next();
+			LocalDateTime dataIrLaikas = LocalDateTime.now();
+			Irasas pajamos = new PajamuIrasas(suma, pozymisArIBanka, papildomaInfo, dataIrLaikas);
 			irasas.add(pajamos);
 
 		}
@@ -39,12 +46,11 @@ public class Biudzetas {
 			float suma;
 			String papildomaInfo;
 			boolean pozymisArIBanka;
-			String kategorija;
 			suma = sc.nextFloat();
-			papildomaInfo = sc.next();
 			pozymisArIBanka = sc.nextBoolean();
-			kategorija = sc.next();
-			Irasas islaidos = new IslaiduIrasas(suma, kategorija, pozymisArIBanka, papildomaInfo);
+			papildomaInfo = sc.next();
+			LocalDateTime dataIrLaikas = LocalDateTime.now();
+			Irasas islaidos = new IslaiduIrasas(suma, pozymisArIBanka, papildomaInfo, dataIrLaikas);
 			irasas.add(islaidos);
 
 		}
@@ -140,5 +146,67 @@ public class Biudzetas {
 
 		}
 
+	}
+
+	void irasytiIFaila() {
+		FileWriter fw;
+		try {
+			fw = new FileWriter("src/test.csv");
+
+			BufferedWriter bw = new BufferedWriter(fw);
+			PrintWriter out = new PrintWriter(bw);
+			for (int i = 0; i < irasas.size(); i++) {
+				if (irasas.get(i) instanceof PajamuIrasas) {
+					out.println(((PajamuIrasas) irasas.get(i)).getKategorija() + "," + irasas.get(i).getDataIrLaikas()
+							+ "," + irasas.get(i).getId() + "," + irasas.get(i).getSuma() + ","
+							+ irasas.get(i).getPapildomaInfo()+","+irasas.get(i).getPozymisArIBanka());
+				}
+				if (irasas.get(i) instanceof IslaiduIrasas) {
+					out.println(((IslaiduIrasas) irasas.get(i)).getKategorija() + "," + irasas.get(i).getDataIrLaikas()
+							+ "," + irasas.get(i).getId() + "," + irasas.get(i).getSuma() + ","
+							+ irasas.get(i).getPapildomaInfo()+","+irasas.get(i).getPozymisArIBanka());
+				}
+			}
+
+			out.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	void skaitytiFaila() throws IOException {
+		try {
+			FileReader fr = new FileReader("src/test.csv");
+			BufferedReader reader = new BufferedReader(fr);
+			String line = null;
+			while ((line = reader.readLine()) != null) {
+				String[] gauta = line.split(",");
+				if (gauta[0].equals("Pajamos")) {
+					String kategorija = gauta[0];
+					LocalDateTime dataIrLaikas = LocalDateTime.parse(gauta[1]);
+					int id = Integer.parseInt(gauta [2]);
+					float suma = Float.parseFloat(gauta[3]);
+					String papildomaInfo = gauta[4];
+					boolean pozymisArIBanka = Boolean.parseBoolean(gauta[5]);
+					Irasas pajamu = new PajamuIrasas(suma, pozymisArIBanka, papildomaInfo, dataIrLaikas);
+					irasas.add(pajamu);
+				}
+				if (gauta[0].equals("Islaidos")) {
+					String kategorija = gauta[0];
+					LocalDateTime dataIrLaikas = LocalDateTime.parse(gauta[1]);
+					int id = Integer.parseInt(gauta [2]);
+					float suma = Float.parseFloat(gauta[3]);
+					String papildomaInfo = gauta[4];
+					boolean pozymisArIBanka = Boolean.parseBoolean(gauta[5]);
+					Irasas islaidos = new PajamuIrasas(suma, pozymisArIBanka, papildomaInfo, dataIrLaikas);
+					irasas.add(islaidos);
+				}
+
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
